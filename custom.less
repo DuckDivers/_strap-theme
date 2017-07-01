@@ -1,0 +1,361 @@
+/* #General
+================================================== */
+html, body {
+	overflow-x: hidden;
+}
+.container {
+	@media (min-width: 1440px){
+		width: 1410px;
+	}
+}
+p, p>span {line-height: 1.5em;}
+a{
+	color: @blue;
+	&:hover, &:focus, &:active {
+		color: #000000;
+		text-decoration: none;
+		.transition(.3s);
+	}
+}
+
+
+/*/ NAVIGATION 
+===================================================*/
+
+
+
+/*/ Logo */
+
+
+
+/* #Content
+================================================== */
+
+
+.btn-primary {
+    color: @black;
+    background-color: @red;
+    border-color: @red;
+    font-size: 18px;
+	font-weight: 600;
+	padding: 9px 12px 7px;
+	margin-top: .5em;
+	.transition(.3s);
+	&:hover, &:focus, &:active {
+		color: @white;
+		font-weight: 500;
+		background-color: @blueDark;
+		border-color: #ccc;
+		.transition(.3s);
+		}
+}
+
+/*/ Content */
+
+/*/ #WooCommerce 
+===================================================*/
+
+
+/*/ WooCommerce */
+
+/* #Comments
+================================================== */
+
+/*/ Comments */
+
+
+
+/* #Widgets
+================================================== */
+/*/ Widgets */
+
+
+
+/* #Shortcodes
+================================================== */
+/* ======= Contact Form ======= */
+.wpcf7 {
+	select,input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input
+	&-not-valid-tip {
+		height: @input-h;
+		max-width: 100%;
+		outline: none;
+	}
+	textarea {
+		height: @textarea-h;
+		padding-top: 1em;
+		margin-top: 20px;
+		margin-bottom: 15px;
+	}
+	&-not-valid-tip {
+		padding: @input-p !important;
+		padding-left: 5px !important;
+		padding-right: 5px !important;
+		border-radius: @input-br;
+		font-weight: @input-fw;
+		font-size: 12px;
+		line-height: @input-lh;
+		font-family: @input-ff;
+	}
+	input[type="reset"] {
+		margin-right: 10px;
+	}
+	.submit-wrap {
+		position: relative;
+		.ajax-loader {
+			position: absolute;
+			top: 50%;
+			margin-top: 0;
+			.translate(0, -50%);
+		}
+	}
+	///WPCF7 form icons for inputs
+	.wpcf7-form-control-wrap {
+		position: relative;
+		margin-bottom: 1em;
+		&:before {
+			position: absolute;
+			height: 100%;
+			width: @input-h;
+			text-align: center;
+			font-family: FontAwesome;
+			font-size: @input-h/2;
+			color: @grayLight;
+			left: 0;
+			line-height: @input-h;
+		}
+		input,
+		textarea {
+			padding-left: @input-h !important;
+			width: 100%;
+		}
+		&.your-name {
+			&:before {
+				content: '\f007';
+			}
+		}
+		&.your-email {
+			&:before {
+				content: '\f0e0';
+			}
+		}
+		&.your-phone {
+			&:before {
+				content: '\f095';
+			}
+		}
+		&.your-message {
+			&:before {
+				content: '\f040';
+				margin-top: 15px;
+			}
+		}
+	}
+	.submit-wrap input {
+		line-height: 0;
+		padding: 20px 25px 16px;
+		border-radius: 0;
+		text-transform: uppercase;
+		}
+}
+
+//
+// Panels
+// --------------------------------------------------
+
+@panel-border-radius: 8px;
+@panel-body-padding: 10px;
+// Base class
+.panel {
+  margin-bottom: 14px;
+  background-color: @grayLighter;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+// Panel contents
+.panel-body {
+  padding: @panel-body-padding;
+}
+
+// Optional heading
+.panel-default {
+	.panel-heading {
+		color: @white;
+	  background: @blueDark;
+	  padding: 12px 10px 7px;
+	  border-bottom: 1px solid transparent;
+	  border-radius: 3px;
+	  &:hover {
+		  background: @blue;
+		  .transition(.3s);
+		  h4 {color: @white;}
+		  }
+	
+	  > .dropdown .dropdown-toggle {
+		color: inherit;
+	  }
+	}
+}
+
+// Optional footer (stays gray in every modifier class)
+.panel-footer {
+  padding: 8px;
+  background-color: @blue;
+  border-top: 1px solid @blueDark;
+  .border-bottom-radius(8px);
+}
+
+
+// List groups in panels
+//
+// By default, space out list group content from panel headings to account for
+// any kind of custom content between the two.
+
+.panel {
+  > .list-group,
+  > .panel-collapse > .list-group {
+    margin-bottom: 0;
+
+    .list-group-item {
+      border-width: 1px 0;
+      border-radius: 0;
+    }
+
+    // Add border top radius for first one
+    &:first-child {
+      .list-group-item:first-child {
+        border-top: 0;
+        .border-top-radius((@panel-border-radius - 1));
+      }
+    }
+
+    // Add border bottom radius for last one
+    &:last-child {
+      .list-group-item:last-child {
+        border-bottom: 0;
+        .border-bottom-radius((@panel-border-radius - 1));
+      }
+    }
+  }
+  > .panel-heading + .panel-collapse > .list-group {
+    .list-group-item:first-child {
+      .border-top-radius(0);
+    }
+  }
+}
+// Collapse space between when there's no additional content.
+.panel-heading + .list-group {
+  .list-group-item:first-child {
+    border-top-width: 0;
+  }
+}
+.list-group + .panel-footer {
+  border-top-width: 0;
+}
+
+.panel-heading[aria-expanded="true"], .panel-heading.active {
+    background: @blue;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    color: @white;
+	 .accordion-toggle:after {
+		/* symbol for "open" panels */
+		font-family: 'fontawesome';  
+		content: "\f0d8";    
+		float: right;        
+		color: @white;         
+	}
+}
+.panel-heading .accordion-toggle:after{
+    /* symbol for "collapsed" panels */
+    content: "\f0d7";  
+	font-family: 'fontawesome';
+	float:right;
+	color: @white;
+}
+/*/ Shortcodes */
+
+.faq-search.pull-right {
+    width: 370px;
+    max-width: 100%;
+}
+
+/* #Footer
+================================================== */
+section.footer-widgets {
+	padding: 40px 0;
+	background-color: @blueDark;
+	color: @white;
+}
+footer#colophon {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 40px;
+}
+
+/*/ Footer */
+
+
+/* #Misc
+================================================== */
+
+/* Back to Top */
+#back-top {
+	display:none;
+	&-wrapper {
+		position: fixed;
+		right: 10px;
+		bottom: 10px;
+		overflow: hidden;
+		z-index: 99;
+		}
+	a {
+		display: block;
+		width: 50px;
+		color: #bbb;
+		text-align: center;
+		text-decoration: none;
+		text-transform: uppercase;
+		font: 11px/100% Arial, Helvetica, sans-serif;
+		.transition(.5s);
+		&:after {
+				content: '\f062';
+				font-family: fontawesome;
+				display: inline-block;
+				position: relative;
+				top: -37px;
+				left: 0px;
+				font-size: 24px;
+				color: @white;
+			}
+		&:hover {
+			color: #000;
+			span {
+				background-color: @blueDark;
+			}
+		}
+	}
+	span {
+		display: block;
+		margin-bottom: 7px;
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		background: @blue;
+		.transition(.5s);
+	}
+}
+/*// Back to Top */
+
+
+@media (max-width: 768px){
+	.parallax-content {
+    	display: none;
+	}
+}
+
+/*/ Misc */
+@import "/less/variables.less";
+@import "/less/mixins.less";
