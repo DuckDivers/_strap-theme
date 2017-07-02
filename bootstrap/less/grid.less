@@ -19,6 +19,12 @@
   @media (min-width: @screen-lg-min) {
     width: @container-lg;
   }
+   @media (min-width: @screen-xl-min) {
+    width: @container-xl;
+  }
+   @media (min-width: @screen-xxl-min) {
+    width: @container-xxl;
+  }
 }
 
 
@@ -81,4 +87,13 @@
 
 @media (min-width: @screen-lg-min) {
   .make-grid(lg);
+}
+
+// XL GRID
+@media (min-width: @screen-xl-min) {
+  .make-grid(xl);
+}
+
+@media (min-width: @screen-xxl-min) {
+  .make-grid(xxl);
 }
