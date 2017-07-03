@@ -14,11 +14,29 @@
         </div><!-- #content -->
     
         <footer id="colophon" class="site-footer" role="contentinfo">
-            <div class="site-info">
-                <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'dd_theme' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'dd_theme' ), 'WordPress' ); ?></a>
-                <span class="sep"> | </span>
-                <?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'dd_theme' ), 'dd_theme', '<a href="http://automattic.com/" rel="designer">Automattic</a>' ); ?>
-            </div><!-- .site-info -->
+             <div class="container">
+                <div class="row footer-widgets">
+                  <div class="col-sm-4" data-motopress-type="dynamic-sidebar" data-motopress-sidebar-id="footer-sidebar-1">
+                    <?php dynamic_sidebar("footer-sidebar-1"); ?>
+                  </div>
+                  <div class="col-sm-4" data-motopress-type="dynamic-sidebar" data-motopress-sidebar-id="footer-sidebar-2">
+                    <?php dynamic_sidebar("footer-sidebar-2"); ?>
+                  </div>
+                  <div class="col-sm-4" data-motopress-type="dynamic-sidebar" data-motopress-sidebar-id="footer-sidebar-3">
+                    <?php dynamic_sidebar("footer-sidebar-3"); ?>
+                  </div>
+                </div>
+                <div id="footer-text" class="footer-text">
+                  <?php $myfooter_text = get_theme_mod('footer_text'); ?>
+                  <?php if($myfooter_text){?>
+                  <?php echo get_theme_mod('footer_text'); ?>
+                  <?php } else { ?>
+                  <span class="footer-logo">
+                  <?php bloginfo('name'); ?>
+                  </span> &copy; <?php echo date('Y'); ?>
+                  <?php } ?>
+                  &bull; Website Created by <a href="https://www.duckdiverllc.com" target="_blank" class="duck"><i class="dd-duck-icon" style="vertical-align:middle"></i>Duck Diver Marketing</a> </div>
+  </div>
         </footer><!-- #colophon -->
 	</div> <!-- Outer Row -->
 </div><!-- #page -->
