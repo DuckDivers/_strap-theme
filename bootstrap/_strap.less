@@ -1,11 +1,6 @@
 /*
 Semantic grid
 */
-
-#content, #colophon {
-  .make-row();
-}
-
 #primary {
   .make-sm-column(12);
   .make-md-column(9);
@@ -19,6 +14,9 @@ Semantic grid
 }
 footer .site-info {
   .make-lg-column(12);
+}
+#masthead .site-branding {
+	padding: 20px 15px;
 }
 
 /*
@@ -150,10 +148,7 @@ From the original _s style.css
 /*
 Comment form
 */
-#commentform
-{
-  .form-horizontal;
-}
+
 #commentform code
 {
   display: block;
