@@ -5,52 +5,44 @@
 
 // Base class
 .panel {
-  margin-bottom: @line-height-computed;
-  background-color: @panel-bg;
+  margin-bottom: 14px;
+  background-color: @gray;
   border: 1px solid transparent;
-  border-radius: @panel-border-radius;
-  .box-shadow(0 1px 1px rgba(0,0,0,.05));
+  border-radius: 8px;
+  cursor: pointer;
 }
 
 // Panel contents
 .panel-body {
   padding: @panel-body-padding;
-  &:extend(.clearfix all);
 }
 
 // Optional heading
-.panel-heading {
-  padding: @panel-heading-padding;
-  border-bottom: 1px solid transparent;
-  .border-top-radius((@panel-border-radius - 1));
-
-  > .dropdown .dropdown-toggle {
-    color: inherit;
-  }
-}
-
-// Within heading, strip any `h*` tag of its default margins for spacing.
-.panel-title {
-  margin-top: 0;
-  margin-bottom: 0;
-  font-size: ceil((@font-size-base * 1.125));
-  color: inherit;
-
-  > a,
-  > small,
-  > .small,
-  > small > a,
-  > .small > a {
-    color: inherit;
-  }
+.panel-default {
+	.panel-heading {
+		color: @white;
+	  background: @blueDark;
+	  padding: 12px 10px 7px;
+	  border-bottom: 1px solid transparent;
+	  border-radius: 3px;
+	  &:hover {
+		  background: @blue;
+		  .transition(.3s);
+		  h4 {color: @white;}
+		  }
+	
+	  > .dropdown .dropdown-toggle {
+		color: inherit;
+	  }
+	}
 }
 
 // Optional footer (stays gray in every modifier class)
 .panel-footer {
-  padding: @panel-footer-padding;
-  background-color: @panel-footer-bg;
-  border-top: 1px solid @panel-inner-border;
-  .border-bottom-radius((@panel-border-radius - 1));
+  padding: 8px;
+  background-color: @blue;
+  border-top: 1px solid @blueDark;
+  .border-bottom-radius(8px);
 }
 
 
@@ -99,6 +91,27 @@
 }
 .list-group + .panel-footer {
   border-top-width: 0;
+}
+
+.panel-heading[aria-expanded="true"], .panel-heading.active {
+    background: @blue;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    color: @white;
+	 .accordion-toggle:after {
+		/* symbol for "open" panels */
+		font-family: 'fontawesome';  
+		content: "\f0d8";    
+		float: right;        
+		color: @white;         
+	}
+}
+.panel-heading .accordion-toggle:after{
+    /* symbol for "collapsed" panels */
+    content: "\f0d7";  
+	font-family: 'fontawesome';
+	float:right;
+	color: @white;
 }
 
 // Tables in panels
