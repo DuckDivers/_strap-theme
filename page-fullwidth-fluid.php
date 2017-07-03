@@ -1,6 +1,6 @@
 <?php
 /**
-* Template Name: Container-Fluid Page
+* Template Name: Edge to Edge Page
 */
 
 
