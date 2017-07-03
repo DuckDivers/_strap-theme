@@ -1,12 +1,12 @@
 <?php
 /**
-* Template Name: Full Width Container Page
+* Template Name: Container-Fluid Page
 */
 
 
 get_header(); ?>
 
-	<div id="full-width-container" class="content-area container">
+	<div id="full-width-container" class="content-area">
 		<main id="main" class="site-main" role="main">
 
 			<?php while ( have_posts() ) : the_post(); ?>
