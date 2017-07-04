@@ -18,8 +18,12 @@
 		
         <?php 
 		
-		/* Loop Name: Faq */ 
-		//query
+		/* Loop Name: Faq 
+		*
+		* uncomment below for category sort
+		*		
+		*/ 
+		
 		// Get the FAQ Category 
 	
 		/* $count =1; //begin the outer loop
@@ -44,11 +48,11 @@
 						'suppress_filters' 	=> $suppress_filters,
 						//'faq_category'		=> $thecat,
 						);
-					$faq_query = new WP_Query( $args );
-				
-					if ( $faq_query->have_posts() ) : ?>
+					$faq_query = new WP_Query( $args ); ?>
+			
+					<?php if ( $faq_query->have_posts() ) : ?>
 					<h2><?php echo $catname; ?></h2>
-					<div id="<?php echo rand(111111111,999999999);?>" class="accordion">
+					<div id="accordion" class="panel-group">
 					<?php while ( $faq_query->have_posts() ) : $faq_query->the_post();
 						$title =  get_the_title();
 						$content = get_the_content();
@@ -61,8 +65,7 @@
 	//}
 
 	wp_reset_postdata();
-	?>
-        
+	?>   
 	</div><!-- .entry-content -->
 
 </article><!-- #post-## -->
