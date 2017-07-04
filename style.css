@@ -3,12 +3,12 @@ Theme Name: Duck Diver Framework
 Theme URI: https://www.duckdiverllc.com
 Author: Howard E / Duck Diver, LLC
 Author URI: https://www.howardehrenberg.com
-Description: Duck Diver Framework for building themes based on Twitter Bootstrap 3.3.7 and _s
+Description: Duck Diver Framework for building themes based on Twitter Bootstrap 3.3.7
 GitHub Theme URI: DuckDivers/_strap-theme
 Version: 0.2
 License: GNU General Public License
 License URI: license.txt
-Tags: bootstrap, _s, _strap, DuckDiver
+Tags: bootstrap, _s, _strap, DuckDiver Framework
 
 Based on _strap [https://github.com/ptbello/_strap], a mashup of _s [https://github.com/Automattic/_s] and Bootstrap [https://github.com/twitter/bootstrap]
 */
@@ -2871,7 +2871,7 @@ output {
   padding-top: 7px;
   font-size: 14px;
   line-height: 1.42857143;
-  color: #999;
+  color: #555555;
 }
 .form-control {
   display: block;
@@ -2880,7 +2880,7 @@ output {
   padding: 6px 12px;
   font-size: 14px;
   line-height: 1.42857143;
-  color: #999;
+  color: #555555;
   background-color: #fff;
   background-image: none;
   border: 1px solid #ccc;
@@ -4222,7 +4222,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   font-size: 14px;
   font-weight: normal;
   line-height: 1;
-  color: #999;
+  color: #555555;
   text-align: center;
   background-color: #eeeeee;
   border: 1px solid #ccc;
@@ -4356,7 +4356,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav-tabs > li.active > a,
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus {
-  color: #999;
+  color: #555555;
   background-color: #fff;
   border: 1px solid #ddd;
   border-bottom-color: transparent;
@@ -5759,13 +5759,17 @@ button.list-group-item-danger.active:focus {
 }
 .panel {
   margin-bottom: 14px;
-  background-color: #999;
+  background-color: #ccc;
   border: 1px solid transparent;
   border-radius: 8px;
   cursor: pointer;
 }
+.panel h4 > a {
+  color: #fff;
+}
 .panel-body {
   padding: 15px;
+  color: #eeeeee;
 }
 .panel-default .panel-heading {
   color: #fff;
@@ -6015,14 +6019,14 @@ button.list-group-item-danger.active:focus {
 }
 .panel-default > .panel-heading {
   color: #333333;
-  background-color: #f5f5f5;
+  background-color: #777;
   border-color: #ddd;
 }
 .panel-default > .panel-heading + .panel-collapse > .panel-body {
   border-top-color: #ddd;
 }
 .panel-default > .panel-heading .badge {
-  color: #f5f5f5;
+  color: #777;
   background-color: #333333;
 }
 .panel-default > .panel-footer + .panel-collapse > .panel-body {
