@@ -6,15 +6,19 @@
 // Base class
 .panel {
   margin-bottom: 14px;
-  background-color: @gray;
+  background-color: @grayLight;
   border: 1px solid transparent;
   border-radius: 8px;
   cursor: pointer;
+  h4 > a {
+	  color: @white;
+  }
 }
 
 // Panel contents
 .panel-body {
   padding: @panel-body-padding;
+  color: @gray-lighter;
 }
 
 // Optional heading
