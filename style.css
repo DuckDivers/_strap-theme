@@ -6816,7 +6816,9 @@ button.close {
 .modal-header:before,
 .modal-header:after,
 .modal-footer:before,
-.modal-footer:after {
+.modal-footer:after,
+#content:before,
+#content:after {
   content: " ";
   display: table;
 }
@@ -6834,7 +6836,8 @@ button.close {
 .navbar-collapse:after,
 .pager:after,
 .modal-header:after,
-.modal-footer:after {
+.modal-footer:after,
+#content:after {
   clear: both;
 }
 .center-block {
@@ -7157,6 +7160,49 @@ button.close {
 /*
 Semantic grid
 */
+#content {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  #content {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  #content {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  #content {
+    width: 1170px;
+  }
+}
+@media (min-width: 1440px) {
+  #content {
+    width: 1370px;
+  }
+}
+@media (min-width: 1800px) {
+  #content {
+    width: 1570px;
+  }
+}
+#content > .navbar-header,
+#content > .navbar-collapse {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+@media (min-width: 768px) {
+  #content > .navbar-header,
+  #content > .navbar-collapse {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
 #primary {
   position: relative;
   min-height: 1px;
