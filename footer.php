@@ -26,7 +26,7 @@
                     <?php dynamic_sidebar("footer-sidebar-3"); ?>
                   </div>
                 </div>
-                <div id="footer-text" class="footer-text">
+                <div id="footer-text" class="row footer-text">
                   <?php $myfooter_text = get_theme_mod('footer_text'); ?>
                   <?php if($myfooter_text){?>
                   <?php echo get_theme_mod('footer_text'); ?>

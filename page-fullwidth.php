@@ -6,7 +6,7 @@
 
 get_header(); ?>
 
-	<div id="full-width-container" class="content-area container">
+	<div id="main-content" class="row">
 		<main id="main" class="site-main" role="main">
 
 			<?php while ( have_posts() ) : the_post(); ?>
