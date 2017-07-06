@@ -20,24 +20,9 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site container-fluid"><div class="row">
-	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding">
-			<?php if ( is_front_page() || is_home() ) : ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php else : ?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-			<?php endif;
-
-			$description = get_bloginfo( 'description', 'display' );
-			if ( $description || is_customize_preview() ) : ?>
-                <p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-                <?php endif; ?>
-                <?php if(get_theme_mod('header_search_toggle') == 1){get_search_form();} ?>
-      </div> <!-- .site-branding -->
-              
-              <?php get_template_part('page-sections/navigation', 'section'); ?>
-              <!-- #site-navigation --> 
-    </header>
+            <header id="masthead" class="site-header" role="banner">
+				<?php get_template_part( 'page-sections/header', 'section' ); ?>
+			</header><!-- #masthead -->
 
 <div id="content-home" class="site-content">
 
