@@ -6,33 +6,6 @@
 	  $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
 	});
 	
-	$("#header-2").hide(); // hide the fixed navbar initially
-	
-	var topofDiv = $("#masthead").offset().top; //gets offset of header
-	var height = $("#masthead").outerHeight(); //gets height of header
-	
-	if ($(window).width() > 768){
-		$(window).scroll(function(){
-			if($(window).scrollTop() > (topofDiv + height)){
-			   $("#header-2").fadeIn(500);
-			}
-			else{
-			   $("#header-2").hide();
-			}
-		});
-	}
-	$('.btn.btn-primary').addClass('hvr-outline-in');
-
-	//Dropdown cart in header
-		$('.cart-holder > h3').click(function(){
-			if($(this).hasClass('cart-opened')) {
-				$(this).removeClass('cart-opened').next().slideUp(300);
-			} else {
-				$(this).addClass('cart-opened').next().slideDown(300);
-			}
-		});
-						
-})( jQuery );
 
 // ---------------------------------------------------------
 // Back to Top
@@ -55,3 +28,40 @@
 		}, 800);
 		return false;
 	});
+
+// WooCommerce 
+// Magnific Popup Init
+$(document).ready(function() {	 // Document Ready
+	$('.duck-lightbox, .attachment-shop_single').parent().addClass('image-popup-fit-width');
+
+		$('.image-popup-fit-width').magnificPopup({
+			type: 'image',
+			closeOnContentClick: true,
+			mainClass: 'mfp-fade',
+			gallery:{
+				enabled: true,
+				navigateByImgClick: true,
+				preload: [0,0]
+			},
+			image: {
+				verticalFit: false
+			},
+			zoom: {
+			enabled: true,
+			duration: 300, // don't foget to change the duration also in CSS
+			}
+			});
+	});
+
+	//Dropdown cart in header
+		$('.cart-holder > h3').click(function(){
+			if($(this).hasClass('cart-opened')) {
+				$(this).removeClass('cart-opened').next().slideUp(300);
+			} else {
+				$(this).addClass('cart-opened').next().slideDown(300);
+			}
+		});
+						
+})( jQuery );
+	
+})( jQuery );
