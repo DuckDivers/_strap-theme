@@ -39,7 +39,7 @@
               <!-- #site-navigation --> 
     </header>
 
-<div id="content" class="site-content">
+<div id="content-home" class="site-content">
 
 <?php get_template_part( 'template-parts/content', 'slider' ); ?>
 
