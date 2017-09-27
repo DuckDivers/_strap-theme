@@ -28,15 +28,48 @@ get_header(); ?>
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php
-
-					/*
-					 * Include the Post-Format-specific template for the content.
-					 * If you want to override this in a child theme, then include a file
-					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-					 */
-					get_template_part( 'template-parts/content', get_post_format() );
+			<article id="post-<?php the_ID(); ?>" <?php post_class( 'post__holder'); ?>>		<?php if(!is_singular()) : ?>
+				<header class="post-header">
+					<?php if(is_sticky()) : ?>
+						<h5 class="post-label"><?php _e("featured");?></h5>
+					<?php endif; ?>
+					<h2 class="post-title"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
+				</header>
+				<?php endif; 
+					if (has_post_thumbnail()){
+						echo '<figure class="featured-thumbnail thumbnail">'.get_the_post_thumbnail().'</figure>';
+					}
 				?>
+				
+				<?php if ( !is_singular() ) : ?>
+				<!-- Post Content -->
+				<div class="post_content">
+					<div class="excerpt">
+							<?php
+
+							if (has_excerpt()) {
+								the_excerpt();
+							} else {
+								$theContent = get_the_content();
+								$theContent = strip_shortcodes($theContent);
+								echo wp_trim_words( $theContent, 55, '...' );
+							} ?>
+						</div>
+					<?php $button_text = 'Read More' ;?>
+					<a href="<?php the_permalink() ?>" class="btn btn-primary"><?php echo $button_text; ?></a>
+					<div class="clear"></div>
+				</div>
+
+				<?php else :?>
+				<!-- Post Content -->
+				<div class="post_content">
+					<?php the_content(''); ?>
+					<div class="clear"></div>
+				</div>
+				<!-- //Post Content -->
+				<?php endif; ?>
+
+			</article>
 
 			<?php endwhile; ?>
 
@@ -47,6 +80,7 @@ get_header(); ?>
 			<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
 		<?php endif; ?>
+				<?php understrap_pagination(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
