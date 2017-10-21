@@ -16,6 +16,11 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
+			<?php if (get_theme_mod('blog_title_h1')) : ?>
+				<h1><?php echo get_theme_mod('blog_title_h1');?></h1>
+			<?php else :?>
+				<h1><?php echo get_bloginfo() . ' Blog';?></h1>
+			<?php endif; ?>
 
 		<?php if ( have_posts() ) : ?>
 

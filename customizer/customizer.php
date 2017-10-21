@@ -83,7 +83,7 @@ $options[] = array( 'title'             => __( 'Slider Navs', 'dd_theme' ),
                     'sanitize_callback' => '',
                     'type'              => 'control' );				
 /* ---------------------------------------------------------------------------------------------------
-    Controls
+    THEME OPTIONS Controls
 --------------------------------------------------------------------------------------------------- */
 
 $options[] = array( 'title'             => __( 'Theme Options', 'dd_theme' ),
@@ -109,6 +109,15 @@ $options[] = array( 'title'             => __( 'Search in Header', 'dd_theme' ),
                     'option'            => 'checkbox',
                     'sanitize_callback' => '',
                     'type'              => 'control' );
+$options[] = array( 'title'             => __( 'Blog Title', 'dd_theme' ),
+                    'description'       => 'Enter the Title of the Blog Page',
+                    'section'           => 'dd_theme_options',
+                    'id'                => 'blog_title_h1',
+                    'default'           => '',
+                    'option'            => 'text',
+                    'sanitize_callback' => 'esc_html',
+                    'type'              => 'control' );
+
 					
 					
 /* Footer Section --
