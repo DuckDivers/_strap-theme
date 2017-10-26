@@ -27,16 +27,19 @@
                   </div>
                 </div>
                 <div id="footer-text" class="row footer-text">
-                  <?php $myfooter_text = get_theme_mod('footer_text'); ?>
-                  <?php if($myfooter_text){?>
-                  <?php echo get_theme_mod('footer_text'); ?>
-                  <?php } else { ?>
-                  <span class="footer-logo">
-                  <?php bloginfo('name'); ?>
-                  </span> &copy; <?php echo date('Y'); ?>
-                  <?php } ?>
-                  &bull; Website Created by <a href="https://www.duckdiverllc.com" target="_blank" class="duck"><i class="dd-duck-icon" style="vertical-align:middle"></i>Duck Diver Marketing</a> </div>
-  </div>
+					<div class="col-xs-12">
+						<?php $myfooter_text = get_theme_mod('footer_text'); ?>
+						<?php if($myfooter_text){?>
+						<?php echo get_theme_mod('footer_text'); ?>
+						<?php } else { ?>
+						<span class="footer-logo">
+						<?php bloginfo('name'); ?>
+						</span> &copy; <?php echo date('Y'); ?>
+						<?php } ?>
+						&bull; Website Created by <a href="https://www.duckdiverllc.com" target="_blank" class="duck"><i class="dd-duck-icon" style="vertical-align:middle"></i>Duck Diver Marketing</a> 
+					</div>
+                </div>
+  				</div>
         </footer><!-- #colophon -->
 	</div> <!-- Outer Row -->
 </div><!-- #page -->
