@@ -58,3 +58,41 @@ function duck_diver_extra_widgets_init() {
 	)); */
 }
 add_action( 'widgets_init', 'duck_diver_extra_widgets_init' );
+
+class duck_dashboard_widget {
+
+	public function __construct() {
+		
+		add_action( 'wp_dashboard_setup', array( $this, 'add_dashboard_widget' ) );
+
+	}
+
+	public function add_dashboard_widget() {
+
+		wp_add_dashboard_widget(
+			'dd_dash_widget',
+			__( 'Duck Diver Marketing', 'duckdiver' ),
+			array( $this, 'render_dd_dashboard' ),
+			array( $this, 'save_dd_dashboard' )
+		);
+
+	}
+
+	public function render_dd_dashboard() {
+
+		echo '<h2>Duck Diver Marketing</h2>';
+		echo '<p>Need Help?</p>';
+		echo 'call or email.';
+		echo '(970)406-1122';
+
+	}
+
+	public function save_dd_dashboard() {
+
+		echo'<input type="submit">';
+
+	}
+
+}
+
+new duck_dashboard_widget;
