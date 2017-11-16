@@ -1,11 +1,14 @@
 (function($) {
 "use strict";
+	// Bootstrap Menu Behave Like SF-Menu
 	$('ul.nav li.dropdown').hover(function() {
-	  $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+	  $(this).addClass('open').find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
 	}, function() {
-	  $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+	  $(this).removeClass('open').find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
 	});
 	
+// Tooltip
+	$("[rel='tooltip']").tooltip({ placement: 'top' });
 
 // ---------------------------------------------------------
 // Back to Top
