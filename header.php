@@ -41,4 +41,4 @@
             <header id="masthead" class="site-header" role="banner">
 				<?php get_template_part( 'page-sections/header', 'section' ); ?>
 			</header><!-- #masthead -->
-	     <div id="content" class="site-content">
+	     <div id="content" class="site-content row">

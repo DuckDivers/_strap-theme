@@ -1,4 +1,4 @@
-.wpcf7 select,
+a:4:{s:4:"root";s:66:"C:\wamp64\www\wordpress/wp-content/themes/_strap-theme/custom.less";s:8:"compiled";s:9981:".wpcf7 select,
 .wpcf7 input[type="text"],
 .wpcf7 input[type="password"],
 .wpcf7 input[type="datetime"],
@@ -545,3 +545,4 @@ img.mfp-img {
   background-color: transparent;
   border: 0;
 }
+";s:5:"files";a:4:{s:66:"C:\wamp64\www\wordpress\wp-content\themes\_strap-theme\custom.less";i:1499348830;s:79:"C:\wamp64\www\wordpress\wp-content\themes\_strap-theme\bootstrap\dd_custom.less";i:1509027655;s:84:"C:\wamp64\www\wordpress\wp-content\themes\_strap-theme\bootstrap\less\variables.less";i:1499348540;s:76:"C:\wamp64\www\wordpress\wp-content\themes\_strap-theme\bootstrap\mixins.less";i:1499348780;}s:7:"updated";i:1516552372;}

@@ -7,5 +7,3 @@ function faq_type_columns( $taxonomies ) {
     $taxonomies[] = 'faq_category';
     return $taxonomies;
 }
-
-?>

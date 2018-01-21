@@ -50,7 +50,7 @@
 
 		// Register a command to insert `Tabs` shortcode.
 		editor.addCommand( 'cherry_insert_tabs', function( ui, v ) {
-			editor.insertContent( '[tabs direction="top" tab1="Title #1" tab2="Title #2" tab3="Title #3"] [tab1] Tab 1 content... [/tab1] [tab2] Tab 2 content... [/tab2] [tab3] Tab 3 content... [/tab3] [/tabs]' ); // direction - top, right, below, left
+			editor.insertContent( '[tabs direction="top" fill="false" tab1="Title #1" tab2="Title #2" tab3="Title #3"] [tab1] Tab 1 content... [/tab1] [tab2] Tab 2 content... [/tab2] [tab3] Tab 3 content... [/tab3] [/tabs]' ); // direction - top, right, below, left
 		});
 
 		// Register a command to insert `Accordion` shortcode.

@@ -79,16 +79,14 @@ class duck_dashboard_widget {
 	}
 
 	public function render_dd_dashboard() {
-		$logo = get_template_directory_URI() . '/admin/img/duck-diver-logo.png';
-		echo '<div class="main"><ul class="dd_home_widget"><li>';
+
 		echo '<h2>Duck Diver Marketing</h2>';
-		echo '<p>Need Help?<br />';
-		echo 'Call or E-Mail<br />';
-		echo '(970)406-1122<br />';
-		echo '<a href="mailto:support@duckdiverllc.com" target="_blank">E-Mail Support</a></p></li>';
-		echo '<li><img src="'.$logo.'" style="max-width: 100%;" /></li></ul></div>';
+		echo '<p>Need Help?</p>';
+		echo 'call or email.';
+		echo '(970)406-1122';
+
 	}
-	
+
 	public function save_dd_dashboard() {
 
 		echo'<input type="submit">';

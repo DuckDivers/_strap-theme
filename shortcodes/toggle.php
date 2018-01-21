@@ -1,6 +1,6 @@
 <?php
 /**
- * Toggle
+ * Toggle for Bootstrap 4.0
  *
  */
 global $my_accordion_shortcode_count;
@@ -20,7 +20,7 @@ if (!function_exists('my_display_shortcode_accordion')) {
 		$toggleid = rand();
 
 		if($visible!='') {
-			$inClass = "in";
+			$inClass = "show";
 			$activeClass = "active";
 			$collapsed = "";
 		} else {
@@ -29,12 +29,12 @@ if (!function_exists('my_display_shortcode_accordion')) {
 			$collapsed = "collapsed";
 		}
 
-		$output = '<div class="panel panel-default">';
-			$output .= '<div class="panel-heading '.$activeClass.'" id="heading-'.$toggleid.'" data-target="#collapse-'.$toggleid.'" data-parent="#accordion" data-toggle="collapse">';
-			$output .= '<h4 class="panel-title"><a class="accordion-toggle"  data-target="#collapse-'.$toggleid.'">'.$title.'</a></h4>';
+		$output = '<div class="card">';
+			$output .= '<div class="card-header '.$activeClass.'" id="heading-'.$toggleid.'" data-target="#collapse-'.$toggleid.'" data-parent="#accordion" data-toggle="collapse">';
+			$output .= '<h4 class="panel-title"><button class="btn btn-link" data-toggle="collapse" data-target="#collapse-'.$toggleid.'">'.$title.'</button></h4>';
 			$output .= '</div>';
-			$output .= '<div id="collapse-'.$toggleid.'" class="panel-collapse collapse '.$inClass.'" aria-labelledby="heading-'.$toggleid.'">';
-				$output .= ' <div class="panel-body">';
+			$output .= '<div id="collapse-'.$toggleid.'" class="collapse '.$inClass.'" aria-labelledby="heading-'.$toggleid.'" data-parent="#accordion">';
+				$output .= ' <div class="card-body">';
 					$output .= do_shortcode( $content );
 				$output .= '</div>';
 			$output .= '</div>';
@@ -53,7 +53,7 @@ if (!function_exists('my_display_shortcode_accordions')) {
 		// wordpress function
 		global $my_accordion_shortcode_count,$post,$my_global_var;
 
-		$output = '<div class="panel-group" id="accordion">';
+		$output = '<div id="accordion">';
 		$output .= do_shortcode( $content );
 		$output .= '</div>';
 

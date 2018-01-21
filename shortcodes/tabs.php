@@ -5,39 +5,46 @@
 if ( !function_exists('tabs_shortcode') ) {
 	function tabs_shortcode( $atts, $content = null, $shortcodename = '' ) {
 		if ( !array_key_exists('direction', $atts) ) {
-			$direct = array(
-				'direction' => 'top'
-				);
+			$direct = array('direction' => 'top');
 			$atts = array_merge( $direct, $atts );
-		}
+    	}
+        if (!array_key_exists('fill', $atts)){
+            $fill = array('fill'  => 'false');
+        $atts = array_merge( $fill, $atts); 
+        }
 		$output = '<div class="tabs-wrapper tabbable tabs-' . $atts["direction"] . '">';
-
+        if ($atts['fill'] === 'true'){
+                $width = 'nav-fill';
+            }
+            else {
+                $width = '';
+            }
 			// Build tab menu
-			$nav_tabs = '<ul class="nav nav-tabs">';
+			$nav_tabs = '<ul class="nav nav-tabs '.$width.'" role="tablist">';
 				$id       = rand(); // Create unique ID for this tab set
 				$tab_menu = array();
 				$tab_menu = $atts;
 				array_shift( $tab_menu );
-				$num_tabs = count( $tab_menu );
+				$num_tabs = count( $tab_menu ) - 1;
 
 				for ( $i = 1; $i <= $num_tabs; $i++ ) {
 					$addclass = ($i == 1) ? 'active tab-' . $i : 'tab-' . $i ;
-					$nav_tabs .= '<li class="' . $addclass . '"><a href="#tab-' . $i . '-' . $id . '" data-toggle="tab">' . $tab_menu['tab' . $i] . '</a></li>';
+					$nav_tabs .= '<li class="nav-item"><a href="#tab-' . $i . '-' . $id . '" class="nav-link '.$addclass.'" id="tab-'.$i.'-tab" data-toggle="tab">' . $tab_menu['tab' . $i] . '</a></li>';
 				}
 			$nav_tabs .= '</ul>';
 
 			// Build content of tabs
 			$tab_content = '<div class="tab-content">';
-				$i          = 1;
+				$i          = 0;
 				$tabContent = do_shortcode( $content );
 				$find       = array();
 				$replace    = array();
 
 				foreach ( $tab_menu as $key => $value ) {
-					$addclass  = ($i == 1) ? 'in active' : '' ;
+					$addclass  = ($i == 1) ? 'show active' : '' ;
 					$find[]    = '[' . $key . ']';
 					$find[]    = '[/' . $key . ']';
-					$replace[] = '<div id="tab-' . $i . '-' . $id . '" class="tab-pane fade ' . $addclass . '">';
+					$replace[] = '<div role="tabpanel" id="tab-' . $i . '-' . $id . '" class="tab-pane fade ' . $addclass . '">';
 					$replace[] = '</div><!-- .tab (end) -->';
 					$i++;
 				}
