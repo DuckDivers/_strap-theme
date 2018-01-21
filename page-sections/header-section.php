@@ -18,9 +18,6 @@
 			<?php endif; ?>
 		</div><!-- .site-branding -->
 	</section>	
-        <div class="container-fluid">
-			<div class="row">
-				<?php get_template_part('page-sections/navigation', 'section'); ?>
-			</div>
-        </div>    
-		
+    <!-- Main Navigation -->
+    <?php get_template_part('page-sections/navigation', 'section'); ?>
+    <!-- .Main Navigation -->

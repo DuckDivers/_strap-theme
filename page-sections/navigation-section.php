@@ -3,40 +3,44 @@
 * Section Title: Navigation Section
 */ ?>
 
-<nav id="site-navigation" class="main-navigation navbar navbar-default" role="navigation">
-    <a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'duck_diver_theme' ); ?></a>
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-main">
-            <span class="sr-only"><?php _e('Toggle navigation', 'duck_diver_theme'); ?></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </button>
-        <!--<a class="navbar-brand" href="#">Brand</a>-->
-    </div>
+		<nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
 
-    <div class="collapse navbar-collapse" id="navbar-collapse-main">
-        <ul class="nav navbar-nav">
-            <?php if( has_nav_menu( 'primary' ) ) :
-                wp_nav_menu( array(
-                        'theme_location'  => 'primary',
-                        'container'       => false,
-                        //'menu_class'      => 'nav navbar-nav',//  'nav navbar-right'
-                        'walker'          => new Bootstrap_Nav_Menu(),
-                        'fallback_cb'     => null,
-                        'items_wrap'      => '%3$s',// skip the containing <ul>
-                    )
-                );
-            else :
-                wp_list_pages( array(
-                        'menu_class'      => 'nav navbar-nav',//  'nav navbar-right'
-                        'walker'          => new Bootstrap_Page_Menu(),
-                        'title_li'        => null,
-                    )
-                );
-            endif; ?>
-        </ul>
-        <?php if(get_theme_mod('navbar_search_toggle') == 1){get_search_form();} ?>
-    </div><!-- /.navbar-collapse -->
+			<div class="container">
 
-</nav><!-- #site-navigation -->
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+					<!-- Your site title as branding in the menu -->
+					<?php if ( ! has_custom_logo() ) { ?>
+
+						<?php if ( is_front_page() && is_home() ) : ?>
+
+							<h1 class="navbar-brand mb-0"><a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
+							
+						<?php else : ?>
+
+							<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
+						
+						<?php endif; ?>
+						
+					
+					<?php } else {
+						the_custom_logo();
+					} ?><!-- end custom logo -->
+
+				<!-- The WordPress Menu goes here -->
+				<?php wp_nav_menu(
+					array(
+						'theme_location'  => 'primary',
+						'container_class' => 'collapse navbar-collapse',
+						'container_id'    => 'navbarNavDropdown',
+						'menu_class'      => 'navbar-nav',
+						'fallback_cb'     => '',
+						'menu_id'         => 'main-menu',
+						'walker'          => new WP_Bootstrap_Navwalker(),
+					)
+				); ?>
+			</div><!-- .container -->
+
+		</nav><!-- .site-navigation -->
