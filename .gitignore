@@ -53,3 +53,7 @@ configs/
 dwsync.xml
 dw_php_codehinting.config
 *.mno
+
+#Duck Diver Ignore Files
+custom.less.cache
+*.cache
