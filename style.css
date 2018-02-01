@@ -598,12 +598,12 @@ pre code {
 }
 @media (min-width: 1440px) {
   .container {
-    width: 1370px;
+    max-width: 1370px;
   }
 }
 @media (min-width: 1800px) {
   .container {
-    width: 1570px;
+    max-width: 1570px;
   }
 }
 .container-fluid {
