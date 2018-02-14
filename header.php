@@ -41,4 +41,10 @@
             <header id="masthead" class="site-header" role="banner">
 				<?php get_template_part( 'page-sections/header', 'section' ); ?>
 			</header><!-- #masthead -->
-	     <div id="content" class="site-content row">
+         <?php if (is_front_page()){
+            echo '<div id="content-home" class="site-content">';
+            }    
+            else {
+                echo '<div id="content" class="site-content row">';
+            }
+	     
