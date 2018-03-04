@@ -9,7 +9,7 @@ function woocommerce_support() {
 // Template Wrappers
 		function dd_open_shop_content_wrappers(){
 			echo '<div class="container">
-					<div id="shop-wrapper" class="content-area">
+					<div id="shop-wrapper" class="content-area row">
 						<main id="main" class="col-sm-9" role="main">';		
 				}
 		function dd_after_woo_breadcrumbs(){
