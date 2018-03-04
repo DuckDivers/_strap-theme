@@ -614,7 +614,7 @@ pre code {
   margin-left: auto;
 }
 
-.row {
+.row, .site-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
