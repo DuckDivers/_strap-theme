@@ -1,5 +1,5 @@
 /*
-Theme Name: Duck Diver Framework
+Theme Name: Joanne's Beauty Box
 Theme URI: https://www.duckdiverllc.com
 Author: Howard E / Duck Diver, LLC
 Author URI: https://www.howardehrenberg.com
@@ -8997,6 +8997,12 @@ a.text-dark:hover, a.text-dark:focus {
 /*
 Semantic grid
 */
+#content-home.site-content {
+    margin:0;
+}
+#full-width-container {
+    margin: 40px auto;
+}
 #content {
   margin-right: auto;
   margin-left: auto;
