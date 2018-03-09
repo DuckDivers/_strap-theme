@@ -41,6 +41,7 @@
 						'walker'          => new WP_Bootstrap_Navwalker(),
 					)
 				); ?>
+				<?php if(get_theme_mod('navbar_search_toggle') == 1){get_search_form();} ?>
 			</div><!-- .container -->
 
 		</nav><!-- .site-navigation -->
