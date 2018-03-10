@@ -9,18 +9,25 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+		<main id="main" class="site-main col-md-9" role="main">
 
 			<section class="error-404 not-found">
 				<header class="page-header">
+                    <h2 style="font-size: 200px">Error 404</h2>
 					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'dd_theme' ); ?></h1>
 				</header><!-- .page-header -->
 
 				<div class="page-content">
-					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'dd_theme' ); ?></p>
+					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of these links or try a search?', 'dd_theme' ); ?></p>
 
-					<?php get_search_form(); ?>
+					
+
+				</div><!-- .page-content -->
+			</section><!-- .error-404 -->
+
+		</main><!-- #main -->
+        <aside class="col-md-3" id="sidebar">
+            <?php if(get_theme_mod('navbar_search_toggle') != 1){get_search_form();} ?>
 
 					<?php the_widget( 'WP_Widget_Recent_Posts' ); ?>
 
@@ -48,11 +55,6 @@ get_header(); ?>
 					?>
 
 					<?php the_widget( 'WP_Widget_Tag_Cloud' ); ?>
-
-				</div><!-- .page-content -->
-			</section><!-- .error-404 -->
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
+        </aside>
 
 <?php get_footer(); ?>
