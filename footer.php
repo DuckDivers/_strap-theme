@@ -16,18 +16,18 @@
         <footer id="colophon" class="site-footer" role="contentinfo">
              <div class="container">
                 <div class="row footer-widgets">
-                  <div class="col-sm-4" data-motopress-type="dynamic-sidebar" data-motopress-sidebar-id="footer-sidebar-1">
+                  <div class="col-md-4" data-motopress-type="dynamic-sidebar" data-motopress-sidebar-id="footer-sidebar-1">
                     <?php dynamic_sidebar("footer-sidebar-1"); ?>
                   </div>
-                  <div class="col-sm-4" data-motopress-type="dynamic-sidebar" data-motopress-sidebar-id="footer-sidebar-2">
+                  <div class="col-md-4" data-motopress-type="dynamic-sidebar" data-motopress-sidebar-id="footer-sidebar-2">
                     <?php dynamic_sidebar("footer-sidebar-2"); ?>
                   </div>
-                  <div class="col-sm-4" data-motopress-type="dynamic-sidebar" data-motopress-sidebar-id="footer-sidebar-3">
+                  <div class="col-md-4" data-motopress-type="dynamic-sidebar" data-motopress-sidebar-id="footer-sidebar-3">
                     <?php dynamic_sidebar("footer-sidebar-3"); ?>
                   </div>
                 </div>
                 <div id="footer-text" class="row footer-text">
-					<div class="col-xs-12">
+					<div class="col-12">
 						<?php $myfooter_text = get_theme_mod('footer_text'); ?>
 						<?php if($myfooter_text){?>
 						<?php echo get_theme_mod('footer_text'); ?>
