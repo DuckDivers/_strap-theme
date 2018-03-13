@@ -3,14 +3,14 @@
 * Section Title: Navigation Section
 */ ?>
 
-		<nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+		<nav class="navbar navbar-expand-md navbar-light bg-white mb-4">
 
 			<div class="container">
 
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
-
+                    <?php if (get_theme_mod('show_navbar_brand') == 1){ ?>
 					<!-- Your site title as branding in the menu -->
 					<?php if ( ! has_custom_logo() ) { ?>
 
@@ -28,8 +28,8 @@
 					<?php } else {
 						the_custom_logo();
 					} ?><!-- end custom logo -->
-
-				<!-- The WordPress Menu goes here -->
+                <?php }	//Navbar Brand ?>
+                <!-- The WordPress Menu goes here -->
 				<?php wp_nav_menu(
 					array(
 						'theme_location'  => 'primary',
