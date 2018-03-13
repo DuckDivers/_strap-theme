@@ -9,12 +9,18 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+<main id="main" class="site-main col-md-9" role="main">
 
 		<?php while ( have_posts() ) : the_post(); ?>
-
-			<?php get_template_part( 'template-parts/content', 'single' ); ?>
+            
+            <?php $type = get_post_type( get_the_ID() ); 
+                if ($type !== 'post') {
+                    get_template_part ('template-parts/content-single', $type);
+                } else {
+                    get_template_part( 'template-parts/content', 'single' ); 
+                }
+            
+                ?>
 
 			<?php the_post_navigation(); ?>
 
@@ -28,7 +34,9 @@ get_header(); ?>
 		<?php endwhile; // End of the loop. ?>
 
 		</main><!-- #main -->
-	</div><!-- #primary -->
-
-<?php get_sidebar(); ?>
+    <aside class="col-md-3">
+         <?php get_sidebar(); ?>
+    </aside>
+    </div><!-- #primary -->
+</div>
 <?php get_footer(); ?>
