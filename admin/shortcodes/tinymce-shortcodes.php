@@ -97,12 +97,12 @@ if ( !class_exists('Cherry_TinyMCE_Shortcodes') ) {
 
 			<div id="dialog" style="display:none">
 				<div class="buttons-wrapper">
-					<input type="button" id="cancel-button" class="button alignleft" name="cancel" value="<?php _e('Cancel', CHERRY_PLUGIN_DOMAIN) ?>" accesskey="C" />
-					<input type="button" id="insert-button" class="button-primary alignright" name="insert" value="<?php _e('Insert', CHERRY_PLUGIN_DOMAIN) ?>" accesskey="I" />
+					<input type="button" id="cancel-button" class="button alignleft" name="cancel" value="<?php _e('Cancel', dd_theme) ?>" accesskey="C" />
+					<input type="button" id="insert-button" class="button-primary alignright" name="insert" value="<?php _e('Insert', dd_theme) ?>" accesskey="I" />
 					<div class="clear"></div>
 				</div>
 				<div class="clear"></div>
-				<h3 class="sc-options-title"><?php _e('Shortcode Options', CHERRY_PLUGIN_DOMAIN) ?></h3>
+				<h3 class="sc-options-title"><?php _e('Shortcode Options', dd_theme) ?></h3>
 				<div id="shortcode-options" class="alignleft">
 					<table id="options-table">
 					</table>

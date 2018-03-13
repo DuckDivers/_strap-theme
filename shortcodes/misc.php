@@ -13,7 +13,7 @@ if (!function_exists('shortcode_close_icon')) {
 
 		$output = '<a class="close" href="#" data-dismiss="'.$dismiss.'">&times;</a>';
 
-		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
+		$output = apply_filters( 'dd_shortcodes_output', $output, $atts, $shortcodename );
 
 		return $output;
 	}
@@ -32,7 +32,7 @@ if (!function_exists('shortcode_well')) {
 		$output .= do_shortcode($content);
 		$output .= '</div>';
 
-		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
+		$output = apply_filters( 'dd_shortcodes_output', $output, $atts, $shortcodename );
 
 		return $output;
 	}
@@ -44,7 +44,7 @@ if (!function_exists('shortcode_small')) {
 	function shortcode_small( $atts, $content = null, $shortcodename = '' ) {
 		$output = '<small>'.do_shortcode($content).'</small>';
 
-		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
+		$output = apply_filters( 'dd_shortcodes_output', $output, $atts, $shortcodename );
 
 		return $output;
 	}
@@ -105,7 +105,7 @@ if ( !function_exists( 'title_shortcode' ) ) {
 		}
 
 		$output .= '</div><!-- //.title-box -->';
-		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
+		$output = apply_filters( 'dd_shortcodes_output', $output, $atts, $shortcodename );
 
 		return $output;
 	}
@@ -157,7 +157,7 @@ if (!function_exists('shortcode_site_map')) {
 		}
 		$output .= '</div>';
 
-		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
+		$output = apply_filters( 'dd_shortcodes_output', $output, $atts, $shortcodename );
 
 		return $output;
 	}

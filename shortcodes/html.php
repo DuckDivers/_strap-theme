@@ -12,7 +12,7 @@ if (!function_exists('frame_shortcode')) {
 		$output .= do_shortcode($content);
 		$output .= '</figure>';
 
-		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
+		$output = apply_filters( 'dd_shortcodes_output', $output, $atts, $shortcodename );
 
 		return $output;
 	}
@@ -24,7 +24,7 @@ if (!function_exists('button_shortcode')) {
 		extract(shortcode_atts(
 			array(
 				'link'    => 'http://www.google.com',
-				'text'    => __('Read more', CHERRY_PLUGIN_DOMAIN),
+				'text'    => __('Read more', dd_theme),
 				'size'    => 'normal',
 				'style'   => '',
 				'target'  => '_self',
@@ -40,7 +40,7 @@ if (!function_exists('button_shortcode')) {
 		$output .= $text;
 		$output .= '</a><!-- .btn -->';
 
-		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
+		$output = apply_filters( 'dd_shortcodes_output', $output, $atts, $shortcodename );
 
 		return $output;
 	}
@@ -62,7 +62,7 @@ if (!function_exists('map_shortcode')) {
 			$output .= '</iframe>';
 		$output .= '</div>';
 
-		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
+		$output = apply_filters( 'dd_shortcodes_output', $output, $atts, $shortcodename );
 
 		return $output;
 	}
@@ -126,7 +126,7 @@ if (!function_exists('dropcap_shortcode')) {
 		$output .= do_shortcode($content);
 		$output .= '</span><!-- .dropcap (end) -->';
 
-		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
+		$output = apply_filters( 'dd_shortcodes_output', $output, $atts, $shortcodename );
 
 		return $output;
 	}
@@ -138,7 +138,7 @@ if (!function_exists('hr_shortcode')) {
 	function hr_shortcode( $atts, $content = null, $shortcodename = '' ) {
 		$output = '<div class="hr"></div><!-- .hr (end) -->';
 
-		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
+		$output = apply_filters( 'dd_shortcodes_output', $output, $atts, $shortcodename );
 
 		return $output;
 	}
@@ -151,7 +151,7 @@ if (!function_exists('sm_hr_shortcode')) {
 	function sm_hr_shortcode( $atts, $content = null, $shortcodename = '' ) {
 		$output = '<div class="sm_hr"></div><!-- .sm_hr (end) -->';
 
-		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
+		$output = apply_filters( 'dd_shortcodes_output', $output, $atts, $shortcodename );
 
 		return $output;
 	}
@@ -163,7 +163,7 @@ if (!function_exists('spacer_shortcode')) {
 	function spacer_shortcode( $atts, $content = null, $shortcodename = '' ) {
 		$output = '<div class="spacer"></div><!-- .spacer (end) -->';
 
-		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
+		$output = apply_filters( 'dd_shortcodes_output', $output, $atts, $shortcodename );
 
 		return $output;
 	}
@@ -177,7 +177,7 @@ if (!function_exists('blockquote_shortcode')) {
 		$output .= do_shortcode($content);
 		$output .= '</blockquote><!-- blockquote (end) -->';
 
-		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
+		$output = apply_filters( 'dd_shortcodes_output', $output, $atts, $shortcodename );
 
 		return $output;
 	}
@@ -195,7 +195,7 @@ if (!function_exists('row_shortcode')) {
 		$output .= do_shortcode($content);
 		$output .= '</div><!-- .row (end) -->';
 
-		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
+		$output = apply_filters( 'dd_shortcodes_output', $output, $atts, $shortcodename );
 
 		return $output;
 	}
@@ -213,7 +213,7 @@ function row_inner_shortcode( $atts, $content = null, $shortcodename = '' ) {
 		$output .= do_shortcode($content);
 		$output .= '</div> <!-- .row (end) -->';
 
-		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
+		$output = apply_filters( 'dd_shortcodes_output', $output, $atts, $shortcodename );
 
 		return $output;
 	}
@@ -231,7 +231,7 @@ if (!function_exists('row_fluid_shortcode')) {
 		$output .= do_shortcode($content);
 		$output .= '</div> <!-- .row (end) -->';
 
-		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
+		$output = apply_filters( 'dd_shortcodes_output', $output, $atts, $shortcodename );
 
 		return $output;
 	}
@@ -253,7 +253,7 @@ if (!function_exists('address_shortcode')) {
 		$output .= do_shortcode($content);
 		$output .= '</address><!-- address (end) -->';
 
-		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
+		$output = apply_filters( 'dd_shortcodes_output', $output, $atts, $shortcodename );
 
 		return $output;
 	}
@@ -271,7 +271,7 @@ if ( !function_exists('list_un_shortcode') ) {
 		$output .= do_shortcode( $content );
 		$output .= '</div>';
 
-		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
+		$output = apply_filters( 'dd_shortcodes_output', $output, $atts, $shortcodename );
 
 		return $output;
 	}
@@ -285,7 +285,7 @@ if ( !function_exists('check_list_shortcode') ) {
 		$output .= do_shortcode( $content );
 		$output .= '</div>';
 
-		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
+		$output = apply_filters( 'dd_shortcodes_output', $output, $atts, $shortcodename );
 
 		return $output;
 	}
@@ -299,7 +299,7 @@ if ( !function_exists('ok_circle_list_shortcode') ) {
 		$output .= do_shortcode( $content );
 		$output .= '</div>';
 
-		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
+		$output = apply_filters( 'dd_shortcodes_output', $output, $atts, $shortcodename );
 
 		return $output;
 	}
@@ -313,7 +313,7 @@ if ( !function_exists('ok_sign_list_shortcode') ) {
 		$output .= do_shortcode( $content );
 		$output .= '</div>';
 
-		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
+		$output = apply_filters( 'dd_shortcodes_output', $output, $atts, $shortcodename );
 
 		return $output;
 	}
@@ -327,7 +327,7 @@ if ( !function_exists('check2_list_shortcode') ) {
 		$output .= do_shortcode( $content );
 		$output .= '</div>';
 
-		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
+		$output = apply_filters( 'dd_shortcodes_output', $output, $atts, $shortcodename );
 
 		return $output;
 	}
@@ -341,7 +341,7 @@ if ( !function_exists('arrow_list_shortcode') ) {
 		$output .= do_shortcode( $content );
 		$output .= '</div>';
 
-		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
+		$output = apply_filters( 'dd_shortcodes_output', $output, $atts, $shortcodename );
 
 		return $output;
 	}
@@ -355,7 +355,7 @@ if ( !function_exists('arrow2_list_shortcode') ) {
 		$output .= do_shortcode( $content );
 		$output .= '</div>';
 
-		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
+		$output = apply_filters( 'dd_shortcodes_output', $output, $atts, $shortcodename );
 
 		return $output;
 	}
@@ -369,7 +369,7 @@ if ( !function_exists('circle_arrow_list_shortcode') ) {
 		$output .= do_shortcode( $content );
 		$output .= '</div>';
 
-		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
+		$output = apply_filters( 'dd_shortcodes_output', $output, $atts, $shortcodename );
 
 		return $output;
 	}
@@ -383,7 +383,7 @@ if ( !function_exists('caret_list_shortcode') ) {
 		$output .= do_shortcode( $content );
 		$output .= '</div>';
 
-		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
+		$output = apply_filters( 'dd_shortcodes_output', $output, $atts, $shortcodename );
 
 		return $output;
 	}
@@ -397,7 +397,7 @@ if ( !function_exists('angle_list_shortcode') ) {
 		$output .= do_shortcode( $content );
 		$output .= '</div>';
 
-		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
+		$output = apply_filters( 'dd_shortcodes_output', $output, $atts, $shortcodename );
 
 		return $output;
 	}
@@ -411,7 +411,7 @@ if ( !function_exists('double_angle_list_shortcode') ) {
 		$output .= do_shortcode( $content );
 		$output .= '</div>';
 
-		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
+		$output = apply_filters( 'dd_shortcodes_output', $output, $atts, $shortcodename );
 
 		return $output;
 	}
@@ -425,7 +425,7 @@ if ( !function_exists( 'star_list_shortcode') ) {
 		$output .= do_shortcode( $content );
 		$output .= '</div>';
 
-		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
+		$output = apply_filters( 'dd_shortcodes_output', $output, $atts, $shortcodename );
 
 		return $output;
 	}
@@ -439,7 +439,7 @@ if ( !function_exists('plus_list_shortcode') ) {
 		$output .= do_shortcode( $content );
 		$output .= '</div>';
 
-		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
+		$output = apply_filters( 'dd_shortcodes_output', $output, $atts, $shortcodename );
 
 		return $output;
 	}
@@ -453,7 +453,7 @@ if ( !function_exists('minus_list_shortcode') ) {
 		$output .= do_shortcode( $content );
 		$output .= '</div>';
 
-		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
+		$output = apply_filters( 'dd_shortcodes_output', $output, $atts, $shortcodename );
 
 		return $output;
 	}
@@ -467,7 +467,7 @@ if ( !function_exists('circle_list_shortcode') ) {
 		$output .= do_shortcode( $content );
 		$output .= '</div>';
 
-		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
+		$output = apply_filters( 'dd_shortcodes_output', $output, $atts, $shortcodename );
 
 		return $output;
 	}
@@ -481,7 +481,7 @@ if ( !function_exists('circle_blank_list_shortcode') ) {
 		$output .= do_shortcode( $content );
 		$output .= '</div>';
 
-		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
+		$output = apply_filters( 'dd_shortcodes_output', $output, $atts, $shortcodename );
 
 		return $output;
 	}
@@ -495,7 +495,7 @@ if ( !function_exists('custom_list_shortcode') ) {
 		$output .= do_shortcode( $content );
 		$output .= '</div>';
 
-		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
+		$output = apply_filters( 'dd_shortcodes_output', $output, $atts, $shortcodename );
 
 		return $output;
 	}
@@ -510,7 +510,7 @@ if (!function_exists('vr_shortcode')) {
 		$output .= do_shortcode($content);
 		$output .= '</div><!-- divider (end) -->';
 
-		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
+		$output = apply_filters( 'dd_shortcodes_output', $output, $atts, $shortcodename );
 
 		return $output;
 	}
@@ -534,7 +534,7 @@ if (!function_exists('label_shortcode')) {
 		}
 		$output .= $content .'</span>';
 
-		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
+		$output = apply_filters( 'dd_shortcodes_output', $output, $atts, $shortcodename );
 
 		return $output;
 	}
@@ -550,7 +550,7 @@ if (!function_exists('highlight_shortcode')) {
 		$output .= do_shortcode($content);
 		$output .= '</span><!-- .highlight (end) -->';
 
-		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
+		$output = apply_filters( 'dd_shortcodes_output', $output, $atts, $shortcodename );
 
 		return $output;
 	}
@@ -581,7 +581,7 @@ if (!function_exists('icon_shortcode')) {
 			}
 			$output = '<figure class="align'. $align ." ".$custom_class.'"><img src="'. $icon_url .'" alt=""></figure>';
 
-			$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
+			$output = apply_filters( 'dd_shortcodes_output', $output, $atts, $shortcodename );
 
 			return $output;
 		}else{
@@ -593,7 +593,7 @@ if (!function_exists('icon_shortcode')) {
 			$icon_font_color = ($icon_font_color != '')? $icon_font_color : "#00000";
 			$output = '<figure class="align'.$align.' aligntext'.$align.' "><i class="'.$icon_font.' '.$custom_class.'" style="color:'.$icon_font_color.'; font-size:'.$icon_font_size.'; line-height:1.2em;"></i></figure>';
 
-			$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
+			$output = apply_filters( 'dd_shortcodes_output', $output, $atts, $shortcodename );
 
 			return $output;
 		}
@@ -634,7 +634,7 @@ if (!function_exists('extra_wrap_shortcode')) {
 			$output .= do_shortcode($content);
 		$output .= '</div>';
 
-		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
+		$output = apply_filters( 'dd_shortcodes_output', $output, $atts, $shortcodename );
 
 		return $output;
 	}

@@ -165,15 +165,15 @@ if ( !function_exists('shortcode_carousel_owl') ) {
 							$output .= $date ? '<time datetime="' . get_the_time( 'Y-m-d\TH:i:s', $post_id ) . '">' . get_the_date() . '</time>' : '';
 
 							// post author
-							$output .= $author ? '<em class="author">&nbsp;<span>' . __('by ', CHERRY_PLUGIN_DOMAIN) . '</span>&nbsp;<a href="' . get_author_posts_url( get_the_author_meta( 'ID' ) ).'">' . get_the_author_meta( 'display_name' ) . '</a> </em>' : '';
+							$output .= $author ? '<em class="author">&nbsp;<span>' . __('by ', dd_theme) . '</span>&nbsp;<a href="' . get_author_posts_url( get_the_author_meta( 'ID' ) ).'">' . get_the_author_meta( 'display_name' ) . '</a> </em>' : '';
 
 							// post comment count
 							if ( $comments == 'yes' ) {
 								$comment_count = $carousel_query->post->comment_count;
 								if ( $comment_count >= 1 ) :
-									$comment_count = $comment_count . ' <span>' . __( 'Comments', CHERRY_PLUGIN_DOMAIN ) . '</span>';
+									$comment_count = $comment_count . ' <span>' . __( 'Comments', dd_theme ) . '</span>';
 								else :
-									$comment_count = $comment_count . ' <span>' . __( 'Comment', CHERRY_PLUGIN_DOMAIN ) . '</span>';
+									$comment_count = $comment_count . ' <span>' . __( 'Comment', dd_theme ) . '</span>';
 								endif;
 								$output .= '<a href="'. $post_permalink . '#comments" class="comments_link">' . $comment_count . '</a>';
 							}
@@ -194,7 +194,7 @@ if ( !function_exists('shortcode_carousel_owl') ) {
 							$more_text_single = esc_html( wp_kses_data( $more_text_single ) );
 							if ( $more_text_single != '' ) {
 								$output .= '<a href="' . get_permalink( $post_id ) . '" class="btn btn-primary" title="' . $post_title_attr . '">';
-									$output .= __( $more_text_single, CHERRY_PLUGIN_DOMAIN );
+									$output .= __( $more_text_single, dd_theme );
 								$output .= '</a>';
 							}
 						$output .= '</div>';
@@ -207,7 +207,7 @@ if ( !function_exists('shortcode_carousel_owl') ) {
 		// Restore original Post Data
 		wp_reset_postdata();
 
-		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
+		$output = apply_filters( 'dd_shortcodes_output', $output, $atts, $shortcodename );
 
 		return $output;
 	}

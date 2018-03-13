@@ -209,7 +209,7 @@ if (!function_exists('mini_posts_grid_shortcode')) {
 			$output .= '</ul><!-- .posts-grid (end) -->';
 		$output .= '<div class="clear"></div>';
 
-		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
+		$output = apply_filters( 'dd_shortcodes_output', $output, $atts, $shortcodename );
 
 		return $output;
 	}

@@ -13,7 +13,7 @@ if (!function_exists('service_box_shortcode')) {
 				'icon'         => '',
 				'icon_link'    => '',
 				'text'         => '',
-				'btn_text'     => __('Read more', CHERRY_PLUGIN_DOMAIN),
+				'btn_text'     => __('Read more', dd_theme),
 				'btn_link'     => '',
 				'btn_size'     => '',
 				'target'       => '',
@@ -61,7 +61,7 @@ if (!function_exists('service_box_shortcode')) {
 		$output .= '</div>';
 		$output .= '</div><!-- /Service Box -->';
 
-		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
+		$output = apply_filters( 'dd_shortcodes_output', $output, $atts, $shortcodename );
 
 		return $output;
 	}

@@ -13,7 +13,7 @@ if ( !function_exists('chp_pricing_table_shortcode') ) {
 
 		$output = '<div class="price-plans price-plans-' . $columns . ' ' . $custom_class . '">' . do_shortcode( $content ) . '</div>';
 
-		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
+		$output = apply_filters( 'dd_shortcodes_output', $output, $atts, $shortcodename );
 
 		return $output;
 
@@ -46,7 +46,7 @@ if ( !function_exists('chp_pricing_column_shortcode') ) {
 				<div class='plan-container'>" . do_shortcode($content) . "</div>
 			</div>";
 
-		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
+		$output = apply_filters( 'dd_shortcodes_output', $output, $atts, $shortcodename );
 
 		return $output;
 	}
@@ -67,7 +67,7 @@ if ( !function_exists('chp_pricing_row_shortcode') ) {
 
 		$output = "<div class='plan-features-row" . $odd . "'>" . do_shortcode($content) . "</div>";
 
-		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
+		$output = apply_filters( 'dd_shortcodes_output', $output, $atts, $shortcodename );
 
 		return $output;
 	}
@@ -82,7 +82,7 @@ if ( !function_exists('chp_pricing_column_label_shortcode') ) {
 
 		$output = "<div class='plan plan-labelled'><h4>$title</h4>" . do_shortcode($content) . "</div>";
 
-		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
+		$output = apply_filters( 'dd_shortcodes_output', $output, $atts, $shortcodename );
 
 		return $output;
 	}
@@ -103,7 +103,7 @@ if ( !function_exists('chp_pricing_row_label_shortcode') ) {
 
 		$output = "<div class='plan-labelled-row $odd'>" . do_shortcode($content) . "</div>";
 
-		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
+		$output = apply_filters( 'dd_shortcodes_output', $output, $atts, $shortcodename );
 
 		return $output;
 	}

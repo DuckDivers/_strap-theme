@@ -56,7 +56,7 @@ if (!function_exists('table_shortcode')) {
 		$output .= '</tbody>';
 		$output .= '</table><!-- table (end) -->';
 
-		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
+		$output = apply_filters( 'dd_shortcodes_output', $output, $atts, $shortcodename );
 
 		return $output;
 

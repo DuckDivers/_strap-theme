@@ -3,7 +3,7 @@
 function cherry_grid_column( $atts, $content = null, $shortcodename = '' ) {
 	//remove wrong nested <p>
 	$content = remove_invalid_tags( $content, array('p') );
-	$shortcodename = str_replace("span","col-sm-", $shortcodename);
+	$shortcodename = str_replace("span","col-md-", $shortcodename);
 	extract(shortcode_atts(array(
 		'custom_class'  => ''
 	), $atts));
@@ -50,7 +50,7 @@ function one_half_column($atts, $content = null) {
 	$content = remove_invalid_tags( $content, array('p') );
 
 	// add divs to the content
-	$return = '<div class="col-sm-6">';
+	$return = '<div class="col-md-6">';
 	$return .= do_shortcode( $content );
 	$return .= '</div>';
 
@@ -64,7 +64,7 @@ function one_third_column( $atts, $content = null ) {
 	$content = remove_invalid_tags( $content, array('p') );
 
 	// add divs to the content
-	$return = '<div class="col-sm-4">';
+	$return = '<div class="col-md-4">';
 	$return .= do_shortcode( $content );
 	$return .= '</div>';
 
@@ -78,7 +78,7 @@ function two_third_column( $atts, $content = null ) {
 	$content = remove_invalid_tags( $content, array('p') );
 
 	// add divs to the content
-	$return = '<div class="col-sm-8">';
+	$return = '<div class="col-md-8">';
 	$return .= do_shortcode( $content );
 	$return .= '</div>';
 
@@ -92,7 +92,7 @@ function one_fourth_column( $atts, $content = null ) {
 	$content = remove_invalid_tags( $content, array('p') );
 
 	// add divs to the content
-	$return = '<div class="col-sm-3">';
+	$return = '<div class="col-md-3">';
 	$return .= do_shortcode( $content );
 	$return .= '</div>';
 
@@ -106,7 +106,7 @@ function three_fourth_column( $atts, $content = null) {
 	$content = remove_invalid_tags( $content, array('p') );
 
 	// add divs to the content
-	$return = '<div class="col-sm-9">';
+	$return = '<div class="col-md-9">';
 	$return .= do_shortcode( $content );
 	$return .= '</div>';
 
@@ -120,7 +120,7 @@ function one_sixth_column( $atts, $content = null ) {
 	$content = remove_invalid_tags( $content, array('p') );
 
 	// add divs to the content
-	$return = '<div class="col-sm-2">';
+	$return = '<div class="col-md-2">';
 	$return .= do_shortcode( $content );
 	$return .= '</div>';
 
@@ -134,7 +134,7 @@ function five_sixth_column( $atts, $content = null ) {
 	$content = remove_invalid_tags( $content, array('p') );
 
 	// add divs to the content
-	$return = '<div class="col-sm-10">';
+	$return = '<div class="col-md-10">';
 	$return .= do_shortcode( $content );
 	$return .= '</div>';
 

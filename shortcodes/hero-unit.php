@@ -10,7 +10,7 @@ if (!function_exists('hero_unit_shortcode')) {
 			array(
 				'title'        => '',
 				'text'         => '',
-				'btn_text'     => __('Read more', CHERRY_PLUGIN_DOMAIN),
+				'btn_text'     => __('Read more', dd_theme),
 				'btn_link'     => '',
 				'btn_style'    => '',
 				'btn_size'     => '',
@@ -40,7 +40,7 @@ if (!function_exists('hero_unit_shortcode')) {
 
 		$output .= '</div><!-- .hero-unit (end) -->';
 
-		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
+		$output = apply_filters( 'dd_shortcodes_output', $output, $atts, $shortcodename );
 
 		return $output;
 	}

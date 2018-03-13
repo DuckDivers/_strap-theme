@@ -42,7 +42,7 @@ if (!function_exists('my_display_shortcode_accordion')) {
 
 		$my_accordion_shortcode_count++;
 
-		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
+		$output = apply_filters( 'dd_shortcodes_output', $output, $atts, $shortcodename );
 
 		return $output;
 	}
@@ -60,7 +60,7 @@ if (!function_exists('my_display_shortcode_accordions')) {
 		$my_global_var++;
 		$output = str_replace("\r\n", '',$output);
 
-		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
+		$output = apply_filters( 'dd_shortcodes_output', $output, $atts, $shortcodename );
 
 		return $output;
 	}

@@ -21,7 +21,7 @@ if (!function_exists('posts_grid_shortcode')) {
 			'meta'            => '',
 			'excerpt_count'   => '15',
 			'link'            => 'yes',
-			'link_text'       => __('Read more', CHERRY_PLUGIN_DOMAIN),
+			'link_text'       => __('Read more', dd_theme),
 			'custom_class'    => ''
 		), $atts));
 
@@ -295,7 +295,7 @@ if (!function_exists('posts_grid_shortcode')) {
 		} // end for
 		wp_reset_postdata(); // restore the global $post variable
 
-		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
+		$output = apply_filters( 'dd_shortcodes_output', $output, $atts, $shortcodename );
 
 		return $output;
 	}

@@ -14,7 +14,7 @@ if (!function_exists('shortcode_post_cycle')) {
 				'thumb'            => 'true',
 				'thumb_width'      => '200',
 				'thumb_height'     => '180',
-				'more_text_single' => __('Read more', CHERRY_PLUGIN_DOMAIN),
+				'more_text_single' => __('Read more', dd_theme),
 				'category'         => '',
 				'custom_category'  => '',
 				'excerpt_count'    => '15',
@@ -147,7 +147,7 @@ if (!function_exists('shortcode_post_cycle')) {
 						$output .= '<span class="post-date">';
 						$output .= get_the_date();
 						$output .= '</span>';
-						$output .= '<span class="post-comments">'.__('Comments', CHERRY_PLUGIN_DOMAIN).": ";
+						$output .= '<span class="post-comments">'.__('Comments', dd_theme).": ";
 						$output .= '<a href="'.get_comments_link($post->ID).'">';
 						$output .= get_comments_number($post->ID);
 						$output .= '</a>';
@@ -207,10 +207,10 @@ if (!function_exists('shortcode_post_cycle')) {
 							$portfolioDate = (get_post_meta($post->ID, 'tz_portfolio_date', true)) ? get_post_meta($post->ID, 'tz_portfolio_date', true) : "";
 							$portfolioInfo = (get_post_meta($post->ID, 'tz_portfolio_info', true)) ? get_post_meta($post->ID, 'tz_portfolio_info', true) : "";
 							$portfolioURL = (get_post_meta($post->ID, 'tz_portfolio_url', true)) ? get_post_meta($post->ID, 'tz_portfolio_url', true) : "";
-							$output .="<strong class='portfolio-meta-key'>".__('Client', CHERRY_PLUGIN_DOMAIN).": </strong><span> ".$portfolioClient."</span><br>";
-							$output .="<strong class='portfolio-meta-key'>".__('Date', CHERRY_PLUGIN_DOMAIN).": </strong><span> ".$portfolioDate."</span><br>";
-							$output .="<strong class='portfolio-meta-key'>".__('Info', CHERRY_PLUGIN_DOMAIN).": </strong><span> ".$portfolioInfo."</span><br>";
-							$output .="<a href='".$portfolioURL."'>".__('Launch Project', CHERRY_PLUGIN_DOMAIN)."</a><br>";
+							$output .="<strong class='portfolio-meta-key'>".__('Client', dd_theme).": </strong><span> ".$portfolioClient."</span><br>";
+							$output .="<strong class='portfolio-meta-key'>".__('Date', dd_theme).": </strong><span> ".$portfolioDate."</span><br>";
+							$output .="<strong class='portfolio-meta-key'>".__('Info', dd_theme).": </strong><span> ".$portfolioInfo."</span><br>";
+							$output .="<a href='".$portfolioURL."'>".__('Launch Project', dd_theme)."</a><br>";
 							break;
 
 						default:
@@ -237,7 +237,7 @@ if (!function_exists('shortcode_post_cycle')) {
 			$output .= '</ul>';
 		$output .= '</div>';
 
-		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
+		$output = apply_filters( 'dd_shortcodes_output', $output, $atts, $shortcodename );
 
 		return $output;
 	}

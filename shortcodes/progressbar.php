@@ -55,7 +55,7 @@ if (!function_exists('shortcode_progressbar')) {
 		$output .= '<div class="bar" style="width: '. $value .'%;"></div>';
 		$output .= '</div><!-- .progressbar (end) -->';
 
-		$output = apply_filters( 'cherry_plugin_shortcode_output', $output, $atts, $shortcodename );
+		$output = apply_filters( 'dd_shortcodes_output', $output, $atts, $shortcodename );
 
 		return $output;
 
