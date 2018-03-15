@@ -109,24 +109,15 @@ $options[] = array( 'title'             => __( 'Search in Header', 'dd_theme' ),
                     'option'            => 'checkbox',
                     'sanitize_callback' => '',
                     'type'              => 'control' );
-$options[] = array( 'title'             => __( 'Show &quot;Navbar Brand&quot;', 'dd_theme' ),
-                    'description'       => __( 'Show the Blog Title in the Navbar', 'dd_theme' ),
-                    'section'           => 'dd_theme_options',
-                    'id'                => 'show_navbar_brand',
-					'default'			=> '',
-                    'option'            => 'checkbox',
-                    'sanitize_callback' => '',
-                    'type'              => 'control' );
-$options[] = array( 'title'             => __( 'Blog Title', 'dd_theme' ),
-                    'description'       => 'Enter the Title of the Blog Page',
-                    'section'           => 'dd_theme_options',
-                    'id'                => 'blog_title_h1',
-                    'default'           => '',
-                    'option'            => 'text',
-                    'sanitize_callback' => 'esc_html',
-                    'type'              => 'control' );
 
-					
+$options[] = array ('title'             => __( 'Global Messsage', 'dd_theme' ),
+                    'description'       => 'Enter the global message in header on the right',
+                    'section'           => 'dd_theme_options',
+                    'id'                => 'global_message',
+                    'default'           => '',
+                    'option'            => 'textarea',
+                    'sanitize_callback' => 'esc_html',
+                    'type'              => 'control' );				
 					
 /* Footer Section --
 ----------------------------------------------------------------------------------------------------*/			
@@ -150,4 +141,67 @@ $options[] = array( 'title'             => __( 'Footer Text', 'dd_theme' ),
 
 
 /* Footer Section --
+----------------------------------------------------------------------------------------------------*/		
+
+/* Blog Section --
+----------------------------------------------------------------------------------------------------*/		
+
+$default_blog = get_bloginfo( 'name' );
+
+$options[] = array( 'title'             => __( 'Blog Options', 'dd_theme' ),
+                    'description'       => __( 'Blog Options', 'dd_theme' ),
+                    'panel'             => '',
+                    'id'                => 'dd_blog_options',
+                    'priority'          => 220,
+                    'theme_supports'    => '',
+                    'type'              => 'section' );
+
+$options[] = array( 'title'             => __( 'Blog Title', 'dd_theme' ),
+                    'description'       => 'Enter the Title of the Blog Page',
+                    'section'           => 'dd_blog_options',
+                    'id'                => 'dd_blog_title_h1',
+                    'default'           => $default_blog . ' Blog',
+                    'option'            => 'text',
+                    'sanitize_callback' => 'esc_html',
+                    'type'              => 'control' );
+
+
+$options[] = array( 'title'             => __( 'Blog Featured Image', 'dd_theme' ),
+                    'description'       => 'For the blog feed - how do you want the featured image?',
+                    'section'           => 'dd_blog_options',
+                    'id'                => 'dd_featured_blog_image',
+                    'default'           => 'large',
+                    'option'            => 'radio',
+                    'sanitize_callback' => '',
+                    'choices'           => array(
+                        'large' => __( 'Large', 'dd_theme' ),
+                        'small' => __( 'Small', 'dd_theme' ),
+                        ),
+                    'type'              => 'control' );
+
+$options[] = array( 'title'             => __( 'Read More Text', 'dd_theme' ),
+                    'description'       => 'Enter the Text for the read more button after the blog excerpt',
+                    'section'           => 'dd_blog_options',
+                    'id'                => 'dd_read_more_text',
+                    'default'           => 'Read More',
+                    'option'            => 'text',
+                    'sanitize_callback' => 'esc_html',
+                    'type'              => 'control' );
+
+$options[] = array( 'title'             => __( 'Single Post Featured Image', 'dd_theme' ),
+                    'description'       => 'For the single post how do you want the featured image to appear?',
+                    'section'           => 'dd_blog_options',
+                    'id'                => 'dd_featured_post_image',
+                    'default'           => 'large',
+                    'option'            => 'radio',
+                    'sanitize_callback' => '',
+                    'choices'           => array(
+                        'large' => __( 'Large', 'dd_theme' ),
+                        'small' => __( 'Small', 'dd_theme' ),
+                        'none'  => __( 'None', 'dd_theme' ),
+                        ),
+                    'type'              => 'control' );
+
+
+/* Blog Section --
 ----------------------------------------------------------------------------------------------------*/		
