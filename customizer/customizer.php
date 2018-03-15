@@ -39,7 +39,7 @@ $options[] = array( 'title'             => __( 'Analytics Code', 'dd_theme' ),
                     'id'                => 'theme_ga_code',
                     'default'           => '',
                     'option'            => 'textarea',
-                    'sanitize_callback' => 'wp_kses',
+                //  'sanitize_callback' => 'wp_kses',
                     'type'              => 'control' );
 
 /* / Google Analytics 					
@@ -179,6 +179,20 @@ $options[] = array( 'title'             => __( 'Blog Featured Image', 'dd_theme'
                         ),
                     'type'              => 'control' );
 
+$options[] = array( 'title'             => __( 'Blog Excerpt Length', 'dd_theme' ),
+                    'description'       => '',
+                    'section'           => 'dd_blog_options',
+                    'id'                => 'dd_blog_excerpt_length',
+                    'default'           => 55,
+                    'option'            => 'number',
+                    'sanitize_callback' => '',
+                    'input_attrs'       => array(
+                        'min'   => 5,
+                        'max'   => 100,
+                        'step'  => 1,
+                    ),
+                    'type'              => 'control' );
+
 $options[] = array( 'title'             => __( 'Read More Text', 'dd_theme' ),
                     'description'       => 'Enter the Text for the read more button after the blog excerpt',
                     'section'           => 'dd_blog_options',
@@ -203,5 +217,5 @@ $options[] = array( 'title'             => __( 'Single Post Featured Image', 'dd
                     'type'              => 'control' );
 
 
-/* Blog Section --
+/* Footer Section --
 ----------------------------------------------------------------------------------------------------*/		
