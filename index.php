@@ -77,7 +77,7 @@ get_header(); ?>
 							} ?>
                                    </div>
                                 <?php $button_text = (get_theme_mod('dd_read_more_text')) ? get_theme_mod('dd_read_more_text') : 'Read More' ;?>
-                                <a href="<?php the_permalink() ?>" class="btn btn-primary"><?php echo $button_text; ?></a>
+                                <a href="<?php the_permalink() ?>" class="btn btn-primary read-more-button"><?php echo $button_text; ?></a>
                                 <div class="clear"></div>
                            </div>
                       </div>

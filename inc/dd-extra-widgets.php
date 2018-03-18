@@ -85,7 +85,7 @@ class duck_dashboard_widget {
 		echo '<p>Need Help?<br />';
 		echo 'Call or E-Mail<br />';
 		echo '(970)406-1122<br />';
-		echo '<a href="mailto:support@duckdiverllc.com" target="_blank">E-Mail Support</a></p></li>';
+		echo '<a href="mailto:support@duckdiverllc.com" target="_blank" class="button button-primary">E-Mail Support</a></p></li>';
 		echo '<li><img src="'.$logo.'" style="max-width: 100%;" /></li></ul></div>';
 	}
 	
