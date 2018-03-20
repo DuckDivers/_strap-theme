@@ -1,5 +1,5 @@
 /*
-Theme Name: Duck Diver Framework
+Theme Name: Dauntless Divers Theme
 Theme URI: https://www.duckdiverllc.com
 Author: Howard E / Duck Diver, LLC
 Author URI: https://www.howardehrenberg.com
@@ -9045,6 +9045,9 @@ Semantic grid
     margin-right: 0;
     margin-left: 0;
   }
+}
+#primary-content {
+    width: 100%;
 }
 #primary {
   position: relative;
