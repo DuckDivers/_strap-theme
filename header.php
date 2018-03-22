@@ -32,9 +32,7 @@
 <body <?php body_class(); ?>>
 <?php if ( ! current_user_can( 'manage_options' ) ) { // Exclude Admins from Google Analytics
 	if (get_theme_mod('theme_ga_code')) : ?>
-<script type="text/javascript"> 
             <?php echo stripslashes(get_theme_mod('theme_ga_code')) ;?>
-</script>
 <?php endif; };?>
     <div id="page" class="site container-fluid">
         <div class="row">
