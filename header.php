@@ -43,6 +43,6 @@
             echo '<div id="content-home" class="site-content">';
             }    
             else {
-                echo '<div id="content" class="site-content row">';
+                echo '<div id="content" class="site-content">';
             }
 	     
