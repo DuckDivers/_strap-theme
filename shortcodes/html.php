@@ -24,7 +24,7 @@ if (!function_exists('button_shortcode')) {
 		extract(shortcode_atts(
 			array(
 				'link'    => 'http://www.google.com',
-				'text'    => __('Read more', dd_theme),
+				'text'    => __('Read more', 'dd_theme'),
 				'size'    => 'normal',
 				'style'   => '',
 				'target'  => '_self',

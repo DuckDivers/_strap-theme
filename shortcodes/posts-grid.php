@@ -21,7 +21,7 @@ if (!function_exists('posts_grid_shortcode')) {
 			'meta'            => '',
 			'excerpt_count'   => '15',
 			'link'            => 'yes',
-			'link_text'       => __('Read more', dd_theme),
+			'link_text'       => __('Read more', 'dd_theme'),
 			'custom_class'    => ''
 		), $atts));
 

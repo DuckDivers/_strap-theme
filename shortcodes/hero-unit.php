@@ -10,7 +10,7 @@ if (!function_exists('hero_unit_shortcode')) {
 			array(
 				'title'        => '',
 				'text'         => '',
-				'btn_text'     => __('Read more', dd_theme),
+				'btn_text'     => __('Read more', 'dd_theme'),
 				'btn_link'     => '',
 				'btn_style'    => '',
 				'btn_size'     => '',
