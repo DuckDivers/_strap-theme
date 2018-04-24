@@ -15,3 +15,6 @@ ul.dd_home_widget {
     display: inline-block;
     width: 100%;
 }
+ul.dd_home_widget a.button {
+    margin-top: 1em;
+}
