@@ -102,7 +102,7 @@ if ( !class_exists('Cherry_TinyMCE_Shortcodes') ) {
 					<div class="clear"></div>
 				</div>
 				<div class="clear"></div>
-				<h3 class="sc-options-title"><?php _e('Shortcode Options', dd_theme) ?></h3>
+				<h3 class="sc-options-title"><?php _e('Shortcode Options', 'dd_theme') ?></h3>
 				<div id="shortcode-options" class="alignleft">
 					<table id="options-table">
 					</table>
