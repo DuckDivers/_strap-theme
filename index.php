@@ -18,7 +18,7 @@ $post_class = ($featured_size === 'large') ? 'col-12' : 'col-md-8';
 
 get_header(); ?>
 
-	<div id="primary-content">
+	<div id="primary-content" class="row">
 		<main id="main" class="site-main col-md-9" role="main">
 			<?php if (get_theme_mod('dd_blog_title_h1')) : ?>
 			 <h1><?php echo get_theme_mod('blog_title_h1');?></h1>
