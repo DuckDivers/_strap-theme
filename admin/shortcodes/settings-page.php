@@ -5,7 +5,7 @@
 		<tbody>
 			<tr valign="top">
 				<th scope="row">
-					<?php _e( 'Google Maps API Key (required)', 'cherry-plugin' ); ?>
+					<?php _e( 'Google Maps API Key (required)', 'dd_theme' ); ?>
 				</th>
 				<td>
 					<input
@@ -16,7 +16,7 @@
 						style="width:100%">
 
 				</td>
-				<td><label class="descrirtion" for="cherry_plugin_shortcode_settings[google_apikey]"><?php printf( __( 'This API key can be obtained from the <a href="%s">Google Developers Console</a>.', 'cherry-plugin' ), 'https://console.developers.google.com/' ) ?></td>
+				<td><label class="descrirtion" for="cherry_plugin_shortcode_settings[google_apikey]"><?php printf( __( 'This API key can be obtained from the <a href="%s">Google Developers Console</a>.', 'dd_theme' ), 'https://console.developers.google.com/' ) ?></td>
 			</tr>
 		</tbody>
 	</table>
