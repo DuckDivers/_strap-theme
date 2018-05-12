@@ -18,7 +18,7 @@ get_template_part( 'template-parts/content', 'slider' ); ?>
                         <?php the_content(); ?>
                         <?php
                             wp_link_pages( array(
-                                'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'wallins_dive' ),
+                                'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'dd_theme' ),
                                 'after'  => '</div>',
                             ) );
                         ?>
