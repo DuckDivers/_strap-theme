@@ -223,23 +223,23 @@ if (!function_exists('shortcode_recent_posts')) {
 												<div class="jp-current-time"></div>
 												<div class="jp-controls-holder">
 													<ul class="jp-controls">
-														<li><a href="javascript:;" class="jp-previous" tabindex="1" title="'.__('Previous', dd_theme).'"><span>'.__('Previous', dd_theme).'</span></a></li>
-														<li><a href="javascript:;" class="jp-play" tabindex="1" title="'.__('Play', dd_theme).'"><span>'.__('Play', dd_theme).'</span></a></li>
-														<li><a href="javascript:;" class="jp-pause" tabindex="1" title="'.__('Pause', dd_theme).'"><span>'.__('Pause', dd_theme).'</span></a></li>
-														<li><a href="javascript:;" class="jp-next" tabindex="1" title="'.__('Next', dd_theme).'"><span>'.__('Next', dd_theme).'</span></a></li>
-														<li><a href="javascript:;" class="jp-stop" tabindex="1" title="'.__('Stop', dd_theme).'"><span>'.__('Stop', dd_theme).'</span></a></li>
+														<li><a href="javascript:;" class="jp-previous" tabindex="1" title="'.__('Previous', 'dd_theme').'"><span>'.__('Previous', 'dd_theme').'</span></a></li>
+														<li><a href="javascript:;" class="jp-play" tabindex="1" title="'.__('Play', 'dd_theme').'"><span>'.__('Play', 'dd_theme').'</span></a></li>
+														<li><a href="javascript:;" class="jp-pause" tabindex="1" title="'.__('Pause', 'dd_theme').'"><span>'.__('Pause', 'dd_theme').'</span></a></li>
+														<li><a href="javascript:;" class="jp-next" tabindex="1" title="'.__('Next', 'dd_theme').'"><span>'.__('Next', 'dd_theme').'</span></a></li>
+														<li><a href="javascript:;" class="jp-stop" tabindex="1" title="'.__('Stop', 'dd_theme').'"><span>'.__('Stop', 'dd_theme').'</span></a></li>
 													</ul>
 													<div class="jp-volume-bar">
 														<div class="jp-volume-bar-value"></div>
 													</div>
 													<ul class="jp-toggles">
-														<li><a href="javascript:;" class="jp-mute" tabindex="1" title="'.__('Mute', dd_theme).'"><span>'.__('Mute', dd_theme).'</span></a></li>
-														<li><a href="javascript:;" class="jp-unmute" tabindex="1" title="'.__('Unmute', dd_theme).'"><span>'.__('Unmute', dd_theme).'</span></a></li>
+														<li><a href="javascript:;" class="jp-mute" tabindex="1" title="'.__('Mute', 'dd_theme').'"><span>'.__('Mute', 'dd_theme').'</span></a></li>
+														<li><a href="javascript:;" class="jp-unmute" tabindex="1" title="'.__('Unmute', 'dd_theme').'"><span>'.__('Unmute', 'dd_theme').'</span></a></li>
 													</ul>
 												</div>
 											</div>
 											<div class="jp-no-solution">
-												<span>'.__('Update Required.', dd_theme).'</span>'.__('To play the media you will need to either update your browser to a recent version or update your ', dd_theme).'<a href="http://get.adobe.com/flashplayer/" target="_blank">'.__('Flash plugin', dd_theme).'</a>
+												<span>'.__('Update Required.', 'dd_theme').'</span>'.__('To play the media you will need to either update your browser to a recent version or update your ', 'dd_theme').'<a href="http://get.adobe.com/flashplayer/" target="_blank">'.__('Flash plugin', 'dd_theme').'</a>
 											</div>
 										</div>
 									</div>
@@ -369,7 +369,7 @@ if (!function_exists('shortcode_recent_posts')) {
 							$output .= '<div id="jquery_jplayer_'. $id .'" class="jp-jplayer"></div>';
 							$output .= '<div class="jp-gui">';
 							$output .= '<div class="jp-video-play">';
-							$output .= '<a href="javascript:;" class="jp-video-play-icon" tabindex="1" title="'.__('Play', dd_theme).'">'.__('Play', dd_theme).'</a></div>';
+							$output .= '<a href="javascript:;" class="jp-video-play-icon" tabindex="1" title="'.__('Play', 'dd_theme').'">'.__('Play', 'dd_theme').'</a></div>';
 							$output .= '<div class="jp-interface">';
 							$output .= '<div class="jp-progress">';
 							$output .= '<div class="jp-seek-bar">';
@@ -380,20 +380,20 @@ if (!function_exists('shortcode_recent_posts')) {
 							$output .= '<div class="jp-current-time"></div>';
 							$output .= '<div class="jp-controls-holder">';
 							$output .= '<ul class="jp-controls">';
-							$output .= '<li><a href="javascript:;" class="jp-play" tabindex="1" title="'.__('Play', dd_theme).'"><span>'.__('Play', dd_theme).'</span></a></li>';
-							$output .= '<li><a href="javascript:;" class="jp-pause" tabindex="1" title="'.__('Pause', dd_theme).'"><span>'.__('Pause', dd_theme).'</span></a></li>';
-							$output .= '<li class="li-jp-stop"><a href="javascript:;" class="jp-stop" tabindex="1" title="'.__('Stop', dd_theme).'"><span>'.__('Stop', dd_theme).'</span></a></li>';
+							$output .= '<li><a href="javascript:;" class="jp-play" tabindex="1" title="'.__('Play', 'dd_theme').'"><span>'.__('Play', 'dd_theme').'</span></a></li>';
+							$output .= '<li><a href="javascript:;" class="jp-pause" tabindex="1" title="'.__('Pause', 'dd_theme').'"><span>'.__('Pause', 'dd_theme').'</span></a></li>';
+							$output .= '<li class="li-jp-stop"><a href="javascript:;" class="jp-stop" tabindex="1" title="'.__('Stop', 'dd_theme').'"><span>'.__('Stop', 'dd_theme').'</span></a></li>';
 							$output .= '</ul>';
 							$output .= '<div class="jp-volume-bar">';
 							$output .= '<div class="jp-volume-bar-value">';
 							$output .= '</div></div>';
 							$output .= '<ul class="jp-toggles">';
-							$output .= '<li><a href="javascript:;" class="jp-mute" tabindex="1" title="'.__('Mute', dd_theme).'"><span>'.__('Mute', dd_theme).'</span></a></li>';
-							$output .= '<li><a href="javascript:;" class="jp-unmute" tabindex="1" title="'.__('Unmute', dd_theme).'"><span>'.__('Unmute', dd_theme).'</span></a></li>';
+							$output .= '<li><a href="javascript:;" class="jp-mute" tabindex="1" title="'.__('Mute', 'dd_theme').'"><span>'.__('Mute', 'dd_theme').'</span></a></li>';
+							$output .= '<li><a href="javascript:;" class="jp-unmute" tabindex="1" title="'.__('Unmute', 'dd_theme').'"><span>'.__('Unmute', 'dd_theme').'</span></a></li>';
 							$output .= '</ul>';
 							$output .= '</div></div>';
 							$output .= '<div class="jp-no-solution">';
-							$output .= '<span>'.__('Update Required.', dd_theme).'</span>'.__('To play the media you will need to either update your browser to a recent version or update your ', dd_theme).'<a href="http://get.adobe.com/flashplayer/" target="_blank">'.__('Flash plugin', dd_theme).'</a>';
+							$output .= '<span>'.__('Update Required.', 'dd_theme').'</span>'.__('To play the media you will need to either update your browser to a recent version or update your ', 'dd_theme').'<a href="http://get.adobe.com/flashplayer/" target="_blank">'.__('Flash plugin', 'dd_theme').'</a>';
 							$output .= '</div></div></div></div>';
 							$output .= '</div>';
 					} else {

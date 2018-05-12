@@ -13,7 +13,7 @@ if (!function_exists('service_box_shortcode')) {
 				'icon'         => '',
 				'icon_link'    => '',
 				'text'         => '',
-				'btn_text'     => __('Read more', dd_theme),
+				'btn_text'     => __('Read more', 'dd_theme'),
 				'btn_link'     => '',
 				'btn_size'     => '',
 				'target'       => '',

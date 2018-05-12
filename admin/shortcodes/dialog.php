@@ -17,12 +17,12 @@ $plugin_url = get_template_directory_uri() . '/includes/shortcodes/';
 	<body>
 		<div id="dialog">
 			<div class="buttons-wrapper">
-				<input type="button" id="cancel-button" class="button alignleft" name="cancel" value="<?php _e('Cancel', dd_theme) ?>" accesskey="C" />
-				<input type="button" id="insert-button" class="button-primary alignright" name="insert" value="<?php _e('Insert', dd_theme) ?>" accesskey="I" />
+				<input type="button" id="cancel-button" class="button alignleft" name="cancel" value="<?php _e('Cancel', 'dd_theme') ?>" accesskey="C" />
+				<input type="button" id="insert-button" class="button-primary alignright" name="insert" value="<?php _e('Insert', 'dd_theme') ?>" accesskey="I" />
 				<div class="clear"></div>
 			</div>
 			<div class="clear"></div>
-			<h3 class="sc-options-title"><?php _e('Shortcode Options', dd_theme) ?></h3>
+			<h3 class="sc-options-title"><?php _e('Shortcode Options', 'dd_theme') ?></h3>
 			<div id="shortcode-options" class="alignleft">
 				<table id="options-table">
 				</table>

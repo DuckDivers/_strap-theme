@@ -16,7 +16,7 @@ if (!function_exists('posts_list_shortcode')) {
 			'order_by'     => '',
 			'order'        => '',
 			'link'         => '',
-			'link_text'    => __('Read more', dd_theme),
+			'link_text'    => __('Read more', 'dd_theme'),
 			'tag'          => '',
 			'tags'         => '',
 			'custom_class' => ''
@@ -127,7 +127,7 @@ if (!function_exists('posts_list_shortcode')) {
 								$terms = get_the_terms( $post->ID, $type.'_category');
 								if ( $terms && ! is_wp_error( $terms ) ) {
 									$out = array();
-									$output .= __('Posted in', dd_theme).' ';
+									$output .= __('Posted in', 'dd_theme').' ';
 									foreach ( $terms as $term )
 										$out[] = '<a href="' .get_term_link($term->slug, $type.'_category') .'">'.$term->name.'</a>';
 										$output .= join( ', ', $out );
@@ -136,7 +136,7 @@ if (!function_exists('posts_list_shortcode')) {
 								$categories = get_the_category();
 								if($categories){
 									$out = array();
-									$output .= __('Posted in', dd_theme).' ';
+									$output .= __('Posted in', 'dd_theme').' ';
 									foreach($categories as $category)
 										$out[] = '<a href="'.get_category_link($category->term_id ).'" title="'.$category->name.'">'.$category->cat_name.'</a> ';
 										$output .= join( ', ', $out );
@@ -151,7 +151,7 @@ if (!function_exists('posts_list_shortcode')) {
 
 						// post author
 						$output .= '<span class="post_author">';
-						$output .= __('by ', dd_theme).' ';
+						$output .= __('by ', 'dd_theme').' ';
 						$output .= '<a href="'.get_author_posts_url(get_the_author_meta( 'ID' )).'">'.get_the_author_meta('display_name').'</a>';
 						$output .= '</span>';
 
@@ -160,8 +160,8 @@ if (!function_exists('posts_list_shortcode')) {
 						$post_id = $post->ID;
 						$queried_post = get_post($post_id);
 						$cc = $queried_post->comment_count;
-						if( $cc == $num || $cc > 1 ) : $cc = $cc.' '.__('Comments', dd_theme);
-						else : $cc = $cc.' '.__('Comments', dd_theme);
+						if( $cc == $num || $cc > 1 ) : $cc = $cc.' '.__('Comments', 'dd_theme');
+						else : $cc = $cc.' '.__('Comments', 'dd_theme');
 						endif;
 						$permalink = get_permalink($post_id);
 						$output .= '<span class="post_comment">';
@@ -280,7 +280,7 @@ if (!function_exists('posts_list_shortcode')) {
 					if ($tags == 'yes') {
 						$posttags = get_the_tags();
 						if ($posttags) {
-							$output .= '<footer class="post_footer">'.__('Tags', dd_theme).": ";
+							$output .= '<footer class="post_footer">'.__('Tags', 'dd_theme').": ";
 							  foreach($posttags as $tag) {
 							    $output .= '<a href="'.get_tag_link($tag->term_id).'" rel="tag">'.$tag->name . '</a> ';
 							 }

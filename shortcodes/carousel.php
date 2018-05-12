@@ -157,7 +157,7 @@ if ( !function_exists('shortcode_carousel') ) {
 
 								// post author
 								if ( $author == 'yes' ) {
-									$output .= '<em class="author">&nbsp;<span>' . __('by', dd_theme) . '</span>&nbsp;<a href="' . get_author_posts_url( get_the_author_meta( 'ID' ) ) . '">' . get_the_author_meta( 'display_name' ) . '</a> </em>';
+									$output .= '<em class="author">&nbsp;<span>' . __('by', 'dd_theme') . '</span>&nbsp;<a href="' . get_author_posts_url( get_the_author_meta( 'ID' ) ) . '">' . get_the_author_meta( 'display_name' ) . '</a> </em>';
 								}
 
 								// post comment count

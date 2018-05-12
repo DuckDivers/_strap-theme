@@ -51,7 +51,7 @@
 					$faq_query = new WP_Query( $args ); ?>
 			
 					<?php if ( $faq_query->have_posts() ) : ?>
-					<h2><?php echo $catname; ?></h2>
+					<?php if (isset($catname)) echo "<h2> {$catname} </h2>"; ?>
 					<div id="accordion" class="panel-group">
 					<?php while ( $faq_query->have_posts() ) : $faq_query->the_post();
 						$title =  get_the_title();

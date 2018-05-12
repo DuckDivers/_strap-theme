@@ -165,7 +165,7 @@ if ( !function_exists('shortcode_carousel_owl') ) {
 							$output .= $date ? '<time datetime="' . get_the_time( 'Y-m-d\TH:i:s', $post_id ) . '">' . get_the_date() . '</time>' : '';
 
 							// post author
-							$output .= $author ? '<em class="author">&nbsp;<span>' . __('by ', dd_theme) . '</span>&nbsp;<a href="' . get_author_posts_url( get_the_author_meta( 'ID' ) ).'">' . get_the_author_meta( 'display_name' ) . '</a> </em>' : '';
+							$output .= $author ? '<em class="author">&nbsp;<span>' . __('by ', 'dd_theme') . '</span>&nbsp;<a href="' . get_author_posts_url( get_the_author_meta( 'ID' ) ).'">' . get_the_author_meta( 'display_name' ) . '</a> </em>' : '';
 
 							// post comment count
 							if ( $comments == 'yes' ) {
