@@ -30,10 +30,19 @@
 </head>
 
 <body <?php body_class(); ?>>
-<?php if ( ! current_user_can( 'manage_options' ) ) { // Exclude Admins from Google Analytics
-	if (get_theme_mod('theme_ga_code')) : ?>
-            <?php echo stripslashes(get_theme_mod('theme_ga_code')) ;?>
-<?php endif; };?>
+<?php if( !current_user_can( 'manage_options' ) ){ // Exclude Admins from Google Analytics
+    if( get_theme_mod( 'theme_ga_code' ) ) : ?>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo esc_html( get_theme_mod( 'theme_ga_code' ) ); ?>"></script>
+            <script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', '<?php echo esc_html( get_theme_mod( 'theme_ga_code' ) ); ?>');
+            </script>
+    <?php endif;
+}; ?>
     <div id="page" class="site container-fluid">
         <div class="row">
             <header id="masthead" class="site-header" role="banner">
