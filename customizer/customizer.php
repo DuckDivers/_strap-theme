@@ -34,12 +34,12 @@ $options[] = array( 'title'             => __( 'Google Analytics', 'dd_theme' ),
                     'type'              => 'section' );
 
 $options[] = array( 'title'             => __( 'Analytics Code', 'dd_theme' ),
-                    'description'       => 'Enter the Google Analytics Code',
+                    'description'       => 'Enter the Google Analytics Tracking ID',
                     'section'           => 'theme_google_analytics',
                     'id'                => 'theme_ga_code',
                     'default'           => '',
-                    'option'            => 'textarea',
-                //  'sanitize_callback' => 'wp_kses',
+                    'option'            => 'text',
+                    'sanitize_callback' => 'sanitize_text_field',
                     'type'              => 'control' );
 
 /* / Google Analytics 					
