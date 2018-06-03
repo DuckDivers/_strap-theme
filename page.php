@@ -31,6 +31,6 @@ get_header(); ?>
 
 		</main><!-- #main -->
         <aside class="col-md-3" id="sidebar">
-        	<?php if ($post->post_parent == '25656' || $post->ID == '25656') {dynamic_sidebar('courses-sidebar');} else {get_sidebar();} ?>
+        	<?php get_sidebar();?>
 		</aside>	
 <?php get_footer(); ?>
