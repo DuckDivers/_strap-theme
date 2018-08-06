@@ -9204,3 +9204,6 @@ a.skip-link {
 header#masthead {
     width: 100%;
 }
+.woocommerce figure.woocommerce-product-gallery__wrapper {
+    max-width: inherit !important;
+}
