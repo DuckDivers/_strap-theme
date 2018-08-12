@@ -32,7 +32,7 @@
 // WooCommerce 
 // Magnific Popup Init
 $(document).ready(function() {	 // Document Ready
-	$('.duck-lightbox, .attachment-shop_single').parent().addClass('image-popup-fit-width');
+	$('.duck-lightbox').parent().addClass('image-popup-fit-width');
 
 		$('.image-popup-fit-width').magnificPopup({
 			type: 'image',

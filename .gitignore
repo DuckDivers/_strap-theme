@@ -57,4 +57,3 @@ dw_php_codehinting.config
 #Duck Diver Ignore Files
 custom.less.cache
 *.cache
-
